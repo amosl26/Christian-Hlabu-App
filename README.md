@@ -6,7 +6,7 @@ CBANA Admin hrang tuah mi a si.
 
 1. Install Flutter using the instruction from this page
 
-https://docs.flutter.dev/get-started/install
+   https://docs.flutter.dev/get-started/install
 
 2. Git clone https://github.com/CBANA-DEV/Falam-Hymns-App.git
 3. cd Falam-Hymns-App
