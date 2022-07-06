@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-//testing changes - jt
 void main() {
   runApp(const MyApp());
 }
