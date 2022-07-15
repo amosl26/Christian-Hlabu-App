@@ -60,6 +60,7 @@ flutter:
   
   assets:
     - data/
+    - data/christianhlabu.pdf
     - assets/icons/
     - assets/images/
 

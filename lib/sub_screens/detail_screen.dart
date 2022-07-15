@@ -28,7 +28,7 @@ class _DetailScreen extends State<DetailScreen> {
           actions: <Widget>[],
         ),
         body: SfPdfViewer.asset(
-          'data/hymn_pdf/full-songs.pdf',
+          'data/christianhlabu.pdf',
           initialZoomLevel: 2,
           initialScrollOffset: Offset.fromDirection(10),
           controller: _pdfViewerController,
