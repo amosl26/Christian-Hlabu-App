@@ -1,7 +1,7 @@
-import 'package:falamhymns/main_screens/about.dart';
-import 'package:falamhymns/main_screens/favorite.dart';
-import 'package:falamhymns/main_screens/home.dart';
-import 'package:falamhymns/main_screens/sawnawk.dart';
+import 'package:falamhymns/main_screens/about_screen.dart';
+import 'package:falamhymns/main_screens/favorite_screen.dart';
+import 'package:falamhymns/main_screens/home_screen.dart';
+import 'package:falamhymns/main_screens/sawnawk_screen.dart';
 import 'package:falamhymns/mainScreens/songs.dart';
 import 'package:flutter/material.dart';
 

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SongsScreen extends StatelessWidget {
-  const SongsScreen({Key? key}) : super(key: key);
+class FavoriteScreen extends StatelessWidget {
+  const FavoriteScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: Text('Songs'),
+      child: Text('Favorite Screen'),
     ));
   }
 }

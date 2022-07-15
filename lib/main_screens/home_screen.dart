@@ -1,4 +1,4 @@
-import 'package:falamhymns/sub_screens/display.dart';
+import 'package:falamhymns/sub_screens/display_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -32,7 +32,7 @@ class __HomeScreen extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.all(32.0),
                 child: Text(
-                  "Hello",
+                  "Home Screen",
                   style: TextStyle(fontSize: 24),
                 ),
               ),
