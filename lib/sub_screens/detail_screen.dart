@@ -24,19 +24,19 @@ class _DetailScreen extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PdfViewer'),
+          title: Text('Falam Hymn Hlabu'),
           actions: <Widget>[],
         ),
         body: SfPdfViewer.asset(
           'data/hymn_pdf/full-songs.pdf',
-          initialZoomLevel: 1.5,
+          initialZoomLevel: 2,
           initialScrollOffset: Offset.fromDirection(10),
           controller: _pdfViewerController,
           pageLayoutMode: PdfPageLayoutMode.single,
           pageSpacing: 4,
           canShowScrollHead: false,
           onDocumentLoaded: (details) {
-            _pdfViewerController.jumpToPage(widget.number); // jump to page 3
+            _pdfViewerController.jumpToPage(widget.number);
           },
         ));
   }
