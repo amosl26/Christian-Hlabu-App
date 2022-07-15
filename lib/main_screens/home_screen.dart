@@ -1,4 +1,4 @@
-import 'package:falamhymns/sub_screens/display_screen.dart';
+import 'package:falamhymns/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -45,7 +45,7 @@ class __HomeScreen extends State<HomeScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DisplayScreen(200),
+                        builder: (context) => DetailScreen(200),
                       ));
                 },
               )

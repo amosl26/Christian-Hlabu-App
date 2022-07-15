@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 /// Represents Homepage for Navigation
-class DisplayScreen extends StatefulWidget {
+class DetailScreen extends StatefulWidget {
   final int number;
-  const DisplayScreen(this.number);
+  const DetailScreen(this.number);
   @override
-  _DisplayScreen createState() => _DisplayScreen();
+  _DetailScreen createState() => _DetailScreen();
 }
 
-class _DisplayScreen extends State<DisplayScreen> {
+class _DetailScreen extends State<DetailScreen> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 
   late PdfViewerController _pdfViewerController;
