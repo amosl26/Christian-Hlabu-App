@@ -1,9 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:falamhymns/screens/about.dart';
-import 'package:falamhymns/screens/favorite.dart';
-import 'package:falamhymns/screens/home.dart';
-import 'package:falamhymns/screens/songs.dart';
+import 'package:falamhymns/main_screens/about_screen.dart';
+import 'package:falamhymns/main_screens/favorite_screen.dart';
+import 'package:falamhymns/main_screens/home_screen.dart';
+import 'package:falamhymns/main_screens/sawnawk_screen.dart';
+import 'package:falamhymns/mainScreens/songs.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,18 +36,16 @@ class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
 
   final screens = [
-    Home(),
-    Favorite(),
-    Songs(),
-    About(),
+    HomeScreen(),
+    SawnawkScreen(),
+    SongsScreen(),
+    FavoriteScreen(),
+    AboutScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: IndexedStack(
         index: currentIndex,
         children: screens,
@@ -62,12 +59,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 label: 'Home',
                 backgroundColor: Colors.blue),
             BottomNavigationBarItem(
-                icon: Icon(Icons.favorite),
-                label: 'Favorite',
+                icon: Icon(Icons.menu_book),
+                label: 'Sawnawk',
                 backgroundColor: Colors.blue),
             BottomNavigationBarItem(
                 icon: Icon(Icons.music_note),
                 label: 'Songs',
+                backgroundColor: Colors.blue),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite),
+                label: 'Favorite',
                 backgroundColor: Colors.blue),
             BottomNavigationBarItem(
                 icon: Icon(Icons.info),
