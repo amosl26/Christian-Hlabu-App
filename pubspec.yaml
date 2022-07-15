@@ -59,7 +59,7 @@ flutter:
   uses-material-design: true
   
   assets:
-    - data/hymn_pdf/full-songs.pdf
+    - data/christianhlabu.pdf
     - assets/icons/
     - assets/images/
 
