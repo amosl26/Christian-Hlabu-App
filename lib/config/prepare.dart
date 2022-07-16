@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/config/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -39,12 +40,12 @@ class Prepare extends HookWidget {
 
     return Scaffold(
       body: Container(
-        color: Colors.black,
+        color: primaryBg,
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SplashScreen(24, "dark"),
+              SplashScreen(),
             ],
           ),
         ),

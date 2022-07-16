@@ -28,45 +28,43 @@ class _DashboardState extends State<Dashboard>
       PersistentBottomNavBarItem(
         icon: SvgPicture.asset(
           iconsPath + "home1.svg",
-          color: Colors.deepOrange,
+          color: selectedColor,
         ),
         inactiveIcon: SvgPicture.asset(
           iconsPath + "home1.svg",
-          color: Colors.grey,
+          color: unselectedColor,
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: SvgPicture.asset(iconsPath + "bible.svg", color: selectedColor),
+        inactiveIcon: SvgPicture.asset(
+          iconsPath + "bible.svg",
+          color: unselectedColor,
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: SvgPicture.asset(iconsPath + "music2.svg", color: selectedColor),
+        inactiveIcon: SvgPicture.asset(
+          iconsPath + "music2.svg",
+          color: unselectedColor,
         ),
       ),
       PersistentBottomNavBarItem(
         icon:
-            SvgPicture.asset(iconsPath + "bible.svg", color: Colors.deepOrange),
-        inactiveIcon: SvgPicture.asset(
-          iconsPath + "bible.svg",
-          color: Colors.grey,
-        ),
-      ),
-      PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(iconsPath + "music2.svg",
-            color: Colors.deepOrange),
-        inactiveIcon: SvgPicture.asset(
-          iconsPath + "music2.svg",
-          color: Colors.grey,
-        ),
-      ),
-      PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(iconsPath + "bookmark.svg",
-            color: Colors.deepOrange),
+            SvgPicture.asset(iconsPath + "bookmark.svg", color: selectedColor),
         inactiveIcon: SvgPicture.asset(
           iconsPath + "bookmark.svg",
-          color: Colors.grey,
+          color: unselectedColor,
         ),
       ),
       PersistentBottomNavBarItem(
         icon: SvgPicture.asset(
           iconsPath + "about.svg",
-          color: Colors.deepOrange,
+          color: selectedColor,
         ),
         inactiveIcon: SvgPicture.asset(
           iconsPath + "about.svg",
-          color: Colors.grey,
+          color: unselectedColor,
         ),
       ),
     ];
