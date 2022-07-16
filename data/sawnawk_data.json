@@ -2,6 +2,7 @@
     {
         "id": 0,
         "pageNumber": 499,
+        "sawnawkNumber": "1",
         "titleFalam": "KUM THAR THU",
         "titleEnglish": "(New Year)",
         "favorite": false
@@ -9,6 +10,7 @@
     {
         "id": 1,
         "pageNumber": 500,
+        "sawnawkNumber": "2",
         "titleFalam": "PATHIAN IH UMPINAK",
         "titleEnglish": "(God's Presence)",
         "favorite": false
@@ -16,6 +18,7 @@
     {
         "id": 2,
         "pageNumber": 500,
+        "sawnawkNumber": "3",
         "titleFalam": "SIRNAK IN PATHIAN BETU PAWL",
         "titleEnglish": "(Contrite Worshippers)",
         "favorite": true
@@ -23,6 +26,7 @@
     {
         "id": 3,
         "pageNumber": 501,
+        "sawnawkNumber": "4",
         "titleFalam": "PATHIAN INN",
         "titleEnglish": "(God's House)",
         "favorite": false
@@ -30,6 +34,7 @@
     {
         "id": 4,
         "pageNumber": 502,
+        "sawnawkNumber": "5",
         "titleFalam": "UNAU HRINKHAT FA SINAK",
         "titleEnglish": "(Race Relations)",
         "favorite": true
