@@ -12,12 +12,12 @@ import '../screens/home_screen.dart';
 import '../screens/sawnawk_screen.dart';
 import '../screens/songs_screen.dart';
 
-class Dashboard extends StatefulWidget {
+class BottomBar extends StatefulWidget {
   @override
-  _DashboardState createState() => _DashboardState();
+  _BottomBarState createState() => _BottomBarState();
 }
 
-class _DashboardState extends State<Dashboard>
+class _BottomBarState extends State<BottomBar>
     with SingleTickerProviderStateMixin {
   late PersistentTabController controller;
   late double timeDilation;
@@ -86,11 +86,7 @@ class _DashboardState extends State<Dashboard>
         context,
         controller: controller,
         confineInSafeArea: true,
-        backgroundColor:
-            provider.Provider.of<ProviderFiles>(context, listen: true)
-                    .themeSwitch
-                ? Colors.white
-                : Colors.white,
+        backgroundColor: primaryBg,
         handleAndroidBackButtonPress: true,
         resizeToAvoidBottomInset: true,
         stateManagement: true,
@@ -98,25 +94,17 @@ class _DashboardState extends State<Dashboard>
         items: _navBarsItems(),
         screens: [
           Container(
-              color: Colors.white,
-              height: MediaQuery.of(context).size.height,
-              child: HomeScreen()),
+              height: MediaQuery.of(context).size.height, child: HomeScreen()),
           Container(
-              color: Colors.white,
               height: MediaQuery.of(context).size.height,
               child: SawnawkScreen()),
           Container(
-              color: Colors.white,
-              height: MediaQuery.of(context).size.height,
-              child: SongsScreen()),
+              height: MediaQuery.of(context).size.height, child: SongsScreen()),
           Container(
-              color: Colors.white,
               height: MediaQuery.of(context).size.height,
               child: FavoriteScreen()),
           Container(
-              color: Colors.white,
-              height: MediaQuery.of(context).size.height,
-              child: AboutScreen()),
+              height: MediaQuery.of(context).size.height, child: AboutScreen()),
         ],
       ),
     );

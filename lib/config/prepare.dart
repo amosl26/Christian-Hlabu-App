@@ -30,7 +30,7 @@ class Prepare extends HookWidget {
 
       await Future.delayed(Duration(seconds: 2));
       Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => Dashboard()),
+          MaterialPageRoute(builder: (context) => BottomBar()),
           (Route<dynamic> route) => false);
     }
 
