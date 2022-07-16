@@ -17,11 +17,6 @@ class SplashScreen extends StatelessWidget {
               color: color == "dark" ? Colors.white : Colors.black,
               fontSize: size),
         ),
-        Text(
-          ".",
-          style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: size, color: colorPrimary),
-        ),
       ],
     );
   }
