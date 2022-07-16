@@ -1,7 +1,7 @@
 class SawnAwkModel {
   int? id;
   late int pageNumber;
-  String? titleFalam;
+  late String titleFalam;
   String? titleEnglish;
   bool? favorite;
 

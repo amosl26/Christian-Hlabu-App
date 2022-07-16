@@ -4,7 +4,8 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 /// Represents Homepage for Navigation
 class DetailScreen extends StatefulWidget {
   final int number;
-  const DetailScreen(this.number);
+  final String title;
+  const DetailScreen(this.number, this.title);
   @override
   _DetailScreen createState() => _DetailScreen();
 }
@@ -30,8 +31,8 @@ class _DetailScreen extends State<DetailScreen> {
             onPressed: () => Navigator.of(context).pop(),
           ),
           title: Text(
-            "Details",
-            style: TextStyle(color: Colors.black),
+            widget.title,
+            style: TextStyle(color: Colors.black, fontSize: 15),
           ),
           centerTitle: true,
         ),
