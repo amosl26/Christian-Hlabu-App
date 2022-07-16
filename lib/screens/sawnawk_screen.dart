@@ -38,12 +38,28 @@ class SawnawkScreen extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.only(bottom: 8),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Text(items[index].titleFalam.toString()),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Text(
+                                    items[index].sawnawkNumber.toString(),
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )),
+                              Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Text(
+                                    items[index].titleFalam.toString(),
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )),
+                            ],
                           ),
                           Padding(
                             padding: EdgeInsets.all(8),
