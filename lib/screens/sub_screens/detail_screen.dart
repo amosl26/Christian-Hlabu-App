@@ -24,8 +24,16 @@ class _DetailScreen extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Falam Hymn Hlabu'),
-          actions: <Widget>[],
+          backgroundColor: Colors.white,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          title: Text(
+            "Details",
+            style: TextStyle(color: Colors.black),
+          ),
+          centerTitle: true,
         ),
         body: SfPdfViewer.asset(
           'data/christianhlabu.pdf',

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:falamhymns/models/sawnawk_model.dart';
-import 'package:falamhymns/sub_screens/detail_screen.dart';
+import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
