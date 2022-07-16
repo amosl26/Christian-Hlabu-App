@@ -13,7 +13,7 @@ import 'bottom_bar.dart';
 class Prepare extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final bookmarks = useProvider(bookmarksProvider);
+    final favorite = useProvider(favoriteProvider);
     final color = useProvider(colorProvider);
 
     startSequence() async {
@@ -25,7 +25,7 @@ class Prepare extends HookWidget {
       }
 
       if (box.get('bookmarks') != null) {
-        bookmarks.state = jsonDecode(box.get('bookmarks'));
+        favorite.state = jsonDecode(box.get('bookmarks'));
       }
 
       await Future.delayed(Duration(seconds: 2));
