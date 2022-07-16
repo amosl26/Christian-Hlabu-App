@@ -1,4 +1,4 @@
-import 'package:falamhymns/config/app.dart';
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:falamhymns/config/app.dart';
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/config/provider_files.dart';
 
 import 'package:flutter/material.dart';
