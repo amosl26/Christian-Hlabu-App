@@ -30,22 +30,9 @@ class __HomeScreen extends State<HomeScreen> {
             padding: const EdgeInsets.all(32.0),
             child: Text(
               "Home Screen",
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(fontSize: 15),
             ),
           ),
-          RaisedButton(
-            child: Text(
-              'Open Page 200 for testing',
-              style: TextStyle(fontSize: 24),
-            ),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DetailScreen(200),
-                  ));
-            },
-          )
         ],
       ),
     ));

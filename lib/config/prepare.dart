@@ -14,7 +14,6 @@ class Prepare extends HookWidget {
   Widget build(BuildContext context) {
     final bookmarks = useProvider(bookmarksProvider);
     final color = useProvider(colorProvider);
-    final boarded = useState('no');
 
     startSequence() async {
       await Hive.initFlutter();
@@ -28,19 +27,10 @@ class Prepare extends HookWidget {
         bookmarks.state = jsonDecode(box.get('bookmarks'));
       }
 
-      if (box.get('boarded') != null) {
-        boarded.value = await box.get('boarded');
-      }
       await Future.delayed(Duration(seconds: 2));
-      if (boarded.value == 'no') {
-        Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (context) => Dashboard()),
-            (Route<dynamic> route) => false);
-      } else {
-        Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (context) => Dashboard()),
-            (Route<dynamic> route) => false);
-      }
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => Dashboard()),
+          (Route<dynamic> route) => false);
     }
 
     useEffect(() {
