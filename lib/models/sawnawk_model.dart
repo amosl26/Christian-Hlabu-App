@@ -4,7 +4,7 @@ class SawnAwkModel {
   late String sawnawkNumber;
   late String titleFalam;
   String? titleEnglish;
-  bool? bookmark;
+  late bool bookmark;
 
   SawnAwkModel(this.id, this.pageNumber, this.sawnawkNumber, this.titleFalam,
       this.titleEnglish, this.bookmark);

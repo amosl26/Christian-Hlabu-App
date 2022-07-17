@@ -52,7 +52,8 @@ class SawnawkScreen extends StatelessWidget {
                               MaterialPageRoute(
                                 builder: (context) => DetailScreen(
                                     items[index].pageNumber,
-                                    items[index].titleFalam),
+                                    items[index].titleFalam,
+                                    items[index].bookmark),
                               ));
                         },
                         child: Container(

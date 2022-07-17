@@ -1,4 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
+import 'package:falamhymns/config/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -6,7 +7,8 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 class DetailScreen extends StatefulWidget {
   final int number;
   final String title;
-  const DetailScreen(this.number, this.title);
+  bool bookmark;
+  DetailScreen(this.number, this.title, this.bookmark);
   @override
   _DetailScreen createState() => _DetailScreen();
 }
@@ -51,20 +53,26 @@ class _DetailScreen extends State<DetailScreen> {
             icon: Icon(Icons.arrow_forward),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              print(widget.bookmark);
+              setState(() => widget.bookmark = !widget.bookmark);
+            },
             color: primaryText,
-            icon: Icon(Icons.bookmark),
+            icon: Icon(widget.bookmark == true
+                ? Icons.bookmark
+                : Icons.bookmark_add_outlined),
           ),
           IconButton(
             onPressed: () {},
             color: primaryText,
-            icon: Icon(Icons.print),
+            icon: Icon(Icons.print_outlined),
           ),
         ],
       ),
       body: SfPdfViewer.asset(
         'assets/data/christianhlabu.pdf',
         initialZoomLevel: 3.0,
+        enableDoubleTapZooming: true,
         initialScrollOffset: Offset.fromDirection(10),
         controller: _pdfViewerController,
         pageLayoutMode: PdfPageLayoutMode.single,
