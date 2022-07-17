@@ -67,10 +67,9 @@ flutter:
   uses-material-design: true
   
   assets:
-    - data/
-    - data/christianhlabu.pdf
+    - assets/data/
+    - assets/data/christianhlabu.pdf
     - assets/icons/
-    - assets/images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

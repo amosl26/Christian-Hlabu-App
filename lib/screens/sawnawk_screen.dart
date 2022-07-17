@@ -102,7 +102,7 @@ class SawnawkScreen extends StatelessWidget {
 
 Future<List<SawnAwkModel>> ReadJsonDate() async {
   final jsondata =
-      await rootBundle.rootBundle.loadString('data/sawnawk_data.json');
+      await rootBundle.rootBundle.loadString('assets/data/sawnawk_data.json');
   final list = json.decode(jsondata) as List<dynamic>;
 
   return list.map((e) => SawnAwkModel.fromJson(e)).toList();

@@ -63,7 +63,7 @@ class _DetailScreen extends State<DetailScreen> {
         ],
       ),
       body: SfPdfViewer.asset(
-        'data/christianhlabu.pdf',
+        'assets/data/christianhlabu.pdf',
         initialZoomLevel: 3.0,
         initialScrollOffset: Offset.fromDirection(10),
         controller: _pdfViewerController,
