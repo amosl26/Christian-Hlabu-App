@@ -24,6 +24,10 @@ class SongsScreen extends StatelessWidget {
                 color: selectedColor,
               ),
             ),
+            IconButton(
+                color: primaryText,
+                onPressed: () {},
+                icon: Icon(Icons.sort_by_alpha)),
           ],
         ),
         body: Center(
