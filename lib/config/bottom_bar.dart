@@ -27,11 +27,11 @@ class _BottomBarState extends State<BottomBar>
     return [
       PersistentBottomNavBarItem(
         icon: SvgPicture.asset(
-          iconsPath + "home1.svg",
+          iconsPath + "category.svg",
           color: selectedColor,
         ),
         inactiveIcon: SvgPicture.asset(
-          iconsPath + "home1.svg",
+          iconsPath + "category.svg",
           color: unselectedColor,
         ),
       ),
