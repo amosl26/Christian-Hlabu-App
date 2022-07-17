@@ -1,8 +1,9 @@
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class AboutScreen extends StatelessWidget {
-  const AboutScreen({Key? key}) : super(key: key);
+class BookmarkScreen extends StatelessWidget {
+  const BookmarkScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,12 +12,12 @@ class AboutScreen extends StatelessWidget {
           backgroundColor: primaryBg,
           centerTitle: false,
           title: Text(
-            "About",
+            "Bookmark",
             style: TextStyle(color: primaryText, fontSize: 17),
           ),
         ),
         body: Center(
-          child: Text('About Screen'),
+          child: Text('Bookmark Screen'),
         ));
   }
 }
