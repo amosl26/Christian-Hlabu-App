@@ -1,4 +1,3 @@
-import 'package:falamhymns/config/provider_files.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -12,14 +11,7 @@ void main() {
   globals.appNavigator = GlobalKey<NavigatorState>();
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(provider.MultiProvider(
-    providers: [
-      provider.ChangeNotifierProvider(
-        create: (context) => ProviderFiles(),
-      )
-    ],
-    child: ProviderScope(child: MyApp()),
-  ));
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends HookWidget {
