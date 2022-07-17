@@ -36,16 +36,16 @@ class _BottomBarState extends State<BottomBar>
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(iconsPath + "bible.svg", color: selectedColor),
+        icon: SvgPicture.asset(iconsPath + "music2.svg", color: selectedColor),
         inactiveIcon: SvgPicture.asset(
-          iconsPath + "bible.svg",
+          iconsPath + "music2.svg",
           color: unselectedColor,
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(iconsPath + "music2.svg", color: selectedColor),
+        icon: SvgPicture.asset(iconsPath + "bible.svg", color: selectedColor),
         inactiveIcon: SvgPicture.asset(
-          iconsPath + "music2.svg",
+          iconsPath + "bible.svg",
           color: unselectedColor,
         ),
       ),
@@ -96,10 +96,10 @@ class _BottomBarState extends State<BottomBar>
           Container(
               height: MediaQuery.of(context).size.height, child: HomeScreen()),
           Container(
+              height: MediaQuery.of(context).size.height, child: SongsScreen()),
+          Container(
               height: MediaQuery.of(context).size.height,
               child: SawnawkScreen()),
-          Container(
-              height: MediaQuery.of(context).size.height, child: SongsScreen()),
           Container(
               height: MediaQuery.of(context).size.height,
               child: FavoriteScreen()),
