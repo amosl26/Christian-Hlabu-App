@@ -1,6 +1,0 @@
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/advance_pdf_viewer.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/path_provider_ios.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqflite.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/syncfusion_flutter_pdfviewer.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/url_launcher_ios.framework
