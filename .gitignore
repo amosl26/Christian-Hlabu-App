@@ -99,6 +99,7 @@ unlinked_spec.ds
 **/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Podfile.lock
 
 # macOS
 **/Flutter/ephemeral/
@@ -106,6 +107,12 @@ unlinked_spec.ds
 **/macos/Flutter/GeneratedPluginRegistrant.swift
 **/macos/Flutter/ephemeral
 **/xcuserdata/
+
+# linux
+**/linux/flutter/ephemeral
+
+# windows
+**/windows/flutter/ephemeral
 
 # Coverage
 coverage/
