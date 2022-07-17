@@ -108,7 +108,7 @@ unlinked_spec.ds
 **/xcuserdata/
 
 # linux
-**/linux/Flutter/ephemeral
+**/linux/flutter/ephemeral
 
 # windows
 **/windows/Flutter/ephemeral
