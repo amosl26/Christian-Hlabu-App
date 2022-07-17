@@ -9,11 +9,11 @@ class BookmarkScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: primaryBg,
           centerTitle: false,
           title: Text(
             "Bookmark",
-            style: TextStyle(color: Colors.black, fontSize: 17),
+            style: TextStyle(color: primaryText, fontSize: 17),
           ),
         ),
         body: Center(

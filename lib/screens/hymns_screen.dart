@@ -9,15 +9,15 @@ class SongsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: primaryBg,
           centerTitle: false,
           title: Text(
             "All Hymns",
-            style: TextStyle(color: Colors.black, fontSize: 17),
+            style: TextStyle(color: primaryText, fontSize: 17),
           ),
           actions: [
             IconButton(
-              color: unselectedColor,
+              color: primaryText,
               onPressed: () {},
               icon: SvgPicture.asset(
                 iconsPath + "search.svg",
@@ -27,7 +27,7 @@ class SongsScreen extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: Text('Songs Screen'),
+          child: Text('Hymns Screen'),
         ));
   }
 }

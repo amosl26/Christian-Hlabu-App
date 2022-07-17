@@ -14,15 +14,15 @@ class SawnawkScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: primaryBg,
           centerTitle: false,
           title: Text(
             "Sawnawk Bible",
-            style: TextStyle(color: Colors.black, fontSize: 17),
+            style: TextStyle(color: primaryText, fontSize: 17),
           ),
           actions: [
             IconButton(
-              color: unselectedColor,
+              color: primaryText,
               onPressed: () {},
               icon: SvgPicture.asset(
                 iconsPath + "search.svg",

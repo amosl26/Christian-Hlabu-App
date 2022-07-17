@@ -26,19 +26,19 @@ class _DetailScreen extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: primaryBg,
         centerTitle: false,
         title: Text(
           widget.title,
-          style: TextStyle(color: Colors.black, fontSize: 15),
+          style: TextStyle(color: primaryText, fontSize: 15),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new, color: unselectedColor),
+          icon: Icon(Icons.arrow_back_ios_new, color: primaryText),
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
           IconButton(
-              color: unselectedColor,
+              color: primaryText,
               onPressed: () {
                 _pdfViewerController.previousPage();
               },
@@ -47,17 +47,17 @@ class _DetailScreen extends State<DetailScreen> {
             onPressed: () {
               _pdfViewerController.nextPage();
             },
-            color: unselectedColor,
+            color: primaryText,
             icon: Icon(Icons.arrow_forward),
           ),
           IconButton(
             onPressed: () {},
-            color: unselectedColor,
+            color: primaryText,
             icon: Icon(Icons.bookmark),
           ),
           IconButton(
             onPressed: () {},
-            color: unselectedColor,
+            color: primaryText,
             icon: Icon(Icons.print),
           ),
         ],

@@ -1,3 +1,4 @@
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -7,11 +8,11 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: primaryBg,
           centerTitle: false,
           title: Text(
             "About",
-            style: TextStyle(color: Colors.black, fontSize: 17),
+            style: TextStyle(color: primaryText, fontSize: 17),
           ),
         ),
         body: Center(

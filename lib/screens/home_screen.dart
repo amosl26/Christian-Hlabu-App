@@ -25,19 +25,19 @@ class __HomeScreen extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: primaryBg,
           centerTitle: false,
           title: Text(
             "Categories",
-            style: TextStyle(color: Colors.black, fontSize: 17),
+            style: TextStyle(color: primaryText, fontSize: 17),
           ),
           actions: [
             IconButton(
-              color: unselectedColor,
+              color: primaryText,
               onPressed: () {},
               icon: SvgPicture.asset(
                 iconsPath + "search.svg",
-                color: selectedColor,
+                color: primaryText,
               ),
             ),
           ],
