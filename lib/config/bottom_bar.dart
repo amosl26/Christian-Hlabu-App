@@ -7,7 +7,7 @@ import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:provider/provider.dart' as provider;
 
 import '../screens/about_screen.dart';
-import '../screens/favorite_screen.dart';
+import '../screens/bookmark_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/sawnawk_screen.dart';
 import '../screens/songs_screen.dart';
@@ -102,7 +102,7 @@ class _BottomBarState extends State<BottomBar>
               child: SawnawkScreen()),
           Container(
               height: MediaQuery.of(context).size.height,
-              child: FavoriteScreen()),
+              child: BookmarkScreen()),
           Container(
               height: MediaQuery.of(context).size.height, child: AboutScreen()),
         ],
