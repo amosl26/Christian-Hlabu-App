@@ -13,4 +13,4 @@ const darkModeTextHigh = Color(0xFFDDDDDD);
 
 //tabBar icon
 const selectedColor = Color.fromARGB(255, 49, 20, 154);
-const unselectedColor = Color.fromARGB(255, 163, 147, 147);
+const unselectedColor = Color.fromARGB(255, 3, 0, 0);
