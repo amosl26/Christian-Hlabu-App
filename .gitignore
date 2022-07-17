@@ -112,7 +112,7 @@ unlinked_spec.ds
 **/linux/flutter/ephemeral
 
 # windows
-**/windows/Flutter/ephemeral
+**/windows/flutter/ephemeral
 
 # Coverage
 coverage/
