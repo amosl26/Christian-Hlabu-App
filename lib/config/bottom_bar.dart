@@ -10,7 +10,7 @@ import '../screens/about_screen.dart';
 import '../screens/bookmark_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/sawnawk_screen.dart';
-import '../screens/songs_screen.dart';
+import '../screens/hymns_screen.dart';
 
 class BottomBar extends StatefulWidget {
   @override
