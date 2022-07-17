@@ -107,6 +107,12 @@ unlinked_spec.ds
 **/macos/Flutter/ephemeral
 **/xcuserdata/
 
+# linux
+**/linux/Flutter/ephemeral
+
+# windows
+**/windows/Flutter/ephemeral
+
 # Coverage
 coverage/
 
