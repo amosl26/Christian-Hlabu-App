@@ -5,10 +5,16 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 /// Represents Homepage for Navigation
 class DetailScreen extends StatefulWidget {
-  final int number;
+  final String songNumber;
+  final int pageNumber;
   final String title;
   bool bookmark;
-  DetailScreen(this.number, this.title, this.bookmark);
+  DetailScreen(
+    this.pageNumber,
+    this.title,
+    this.bookmark,
+    this.songNumber,
+  );
   @override
   _DetailScreen createState() => _DetailScreen();
 }
@@ -79,7 +85,7 @@ class _DetailScreen extends State<DetailScreen> {
         pageSpacing: 4,
         canShowScrollHead: false,
         onDocumentLoaded: (details) {
-          _pdfViewerController.jumpToPage(widget.number);
+          _pdfViewerController.jumpToPage(widget.pageNumber);
         },
       ),
     );
