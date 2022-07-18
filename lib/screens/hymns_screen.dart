@@ -2,8 +2,6 @@ import 'dart:convert';
 
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/models/hymn_model.dart';
-import 'package:falamhymns/models/sawnawk_model.dart';
-import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:falamhymns/widget/hymn_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;

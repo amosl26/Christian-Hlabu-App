@@ -1,5 +1,4 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/config/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
