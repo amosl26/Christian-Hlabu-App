@@ -52,11 +52,16 @@ class SawnawkCardWidget extends HookWidget {
           margin: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
           child: Column(
             children: [
-              SizedBox(height: 5),
+              SizedBox(
+                width: 20,
+              ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    width: 20,
+                  ),
                   Padding(
                       padding: EdgeInsets.all(8),
                       child: Text(
@@ -70,14 +75,24 @@ class SawnawkCardWidget extends HookWidget {
                       child: Text(
                         titleFalam,
                         style: TextStyle(
+                          fontSize: 13,
                           fontWeight: FontWeight.bold,
                         ),
                       )),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Text(titleEnglish.toString()),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 55,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Text(titleEnglish.toString()),
+                  ),
+                ],
               ),
             ],
           ),
