@@ -47,6 +47,7 @@ class SongsScreen extends StatelessWidget {
                   itemCount: items == null ? 0 : items.length,
                   itemBuilder: (context, index) {
                     return HymnsCardWidget(
+                      id: items[index].id!,
                       pageNumber: items[index].pageNumber,
                       title: items[index].title,
                       bookmark: items[index].bookmark,

@@ -1,4 +1,4 @@
-import 'package:falamhymns/config/providers.dart';
+import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -6,29 +6,44 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SawnawkCardWidget extends HookWidget {
   final int pageNumber;
+  final int id;
   final String sawnawkNumber;
   final String titleFalam;
   final String titleEnglish;
   bool bookmark;
 
-  SawnawkCardWidget(
-      {required this.pageNumber,
-      required this.sawnawkNumber,
-      required this.bookmark,
-      required this.titleFalam,
-      required this.titleEnglish});
+  SawnawkCardWidget({
+    required this.id,
+    required this.pageNumber,
+    required this.sawnawkNumber,
+    required this.bookmark,
+    required this.titleFalam,
+    required this.titleEnglish,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final color = useProvider(colorProvider);
-
     return InkWell(
       onTap: () => {
         Navigator.push(
             context,
             MaterialPageRoute(
                 builder: (context) => DetailScreen(
-                    pageNumber, titleFalam, bookmark, sawnawkNumber)))
+                      id,
+                      pageNumber,
+                      titleFalam,
+                      bookmark,
+                      sawnawkNumber,
+                      SawnAwkModel(
+                        id,
+                        pageNumber,
+                        sawnawkNumber,
+                        titleFalam,
+                        titleEnglish,
+                        bookmark,
+                      ),
+                      isHymns: false,
+                    )))
       },
       child: Container(
         height: 90,

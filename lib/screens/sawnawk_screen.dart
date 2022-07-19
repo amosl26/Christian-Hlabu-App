@@ -47,6 +47,7 @@ class SawnawkScreen extends StatelessWidget {
                   itemCount: items == null ? 0 : items.length,
                   itemBuilder: (context, index) {
                     return SawnawkCardWidget(
+                      id: items[index].id!,
                       pageNumber: items[index].pageNumber,
                       titleFalam: items[index].titleFalam,
                       bookmark: items[index].bookmark,
