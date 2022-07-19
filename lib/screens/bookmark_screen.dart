@@ -22,11 +22,15 @@ class BookmarkScreen extends HookWidget {
         actions: [
           IconButton(
               color: primaryText,
+              onPressed: () {},
+              icon: Icon(Icons.sort_by_alpha)),
+          IconButton(
+              color: primaryText,
               onPressed: () {
                 provider.Provider.of<SaveDataController>(context, listen: false)
                     .deleteAllData();
               },
-              icon: Icon(Icons.sort)),
+              icon: Icon(Icons.clear_all_outlined)),
         ],
       ),
       body: SingleChildScrollView(
