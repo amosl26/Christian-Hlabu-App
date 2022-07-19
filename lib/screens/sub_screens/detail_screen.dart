@@ -12,11 +12,11 @@ class DetailScreen extends StatefulWidget {
   final int id;
   final String title;
   final bool isHymns;
-  final SawnAwkModel? swan;
+  final SawnAwkModel? sawnawk;
   bool bookmark;
 
   DetailScreen(this.id, this.pageNumber, this.title, this.bookmark,
-      this.songNumber, this.swan,
+      this.songNumber, this.sawnawk,
       {required this.isHymns});
   @override
   _DetailScreen createState() => _DetailScreen();
@@ -102,9 +102,9 @@ class _DetailScreen extends State<DetailScreen> {
                       await data.saveSawnModelInStorage(
                           pageNumber: widget.pageNumber,
                           id: widget.id,
-                          sawnawkNumber: widget.swan!.sawnawkNumber,
-                          titleFalam: widget.swan!.titleFalam,
-                          titleEnglish: widget.swan!.titleEnglish,
+                          sawnawkNumber: widget.sawnawk!.sawnawkNumber,
+                          titleFalam: widget.sawnawk!.titleFalam,
+                          titleEnglish: widget.sawnawk!.titleEnglish,
                           bookmark: widget.bookmark);
                     }
                   }
