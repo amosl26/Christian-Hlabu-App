@@ -14,8 +14,8 @@ void main() {
 
   runApp(provider.MultiProvider(
     providers: [
-      provider.ChangeNotifierProvider<SaveDataController>(
-          create: (_) => SaveDataController())
+      provider.ChangeNotifierProvider<ProviderController>(
+          create: (_) => ProviderController())
     ],
     child: ProviderScope(child: MyApp()),
   ));

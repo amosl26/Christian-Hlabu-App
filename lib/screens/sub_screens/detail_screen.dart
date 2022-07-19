@@ -60,7 +60,7 @@ class _DetailScreen extends State<DetailScreen> {
             color: primaryText,
             icon: Icon(Icons.arrow_forward),
           ),
-          provider.Consumer<SaveDataController>(
+          provider.Consumer<ProviderController>(
             builder: (context, data, child) {
               bool marked;
               if (widget.isHymns) {

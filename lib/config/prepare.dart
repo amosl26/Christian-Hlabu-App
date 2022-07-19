@@ -14,9 +14,9 @@ class Prepare extends HookWidget {
   Widget build(BuildContext context) {
     startSequence() async {
       await Hive.initFlutter();
-      await provider.Provider.of<SaveDataController>(context, listen: false)
+      await provider.Provider.of<ProviderController>(context, listen: false)
           .getHymnesDataFromStorage();
-      await provider.Provider.of<SaveDataController>(context, listen: false)
+      await provider.Provider.of<ProviderController>(context, listen: false)
           .getSwanDataFromStorage();
       var box = await Hive.openBox('appBox');
 

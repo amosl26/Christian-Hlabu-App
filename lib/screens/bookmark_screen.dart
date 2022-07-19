@@ -27,14 +27,14 @@ class BookmarkScreen extends HookWidget {
           IconButton(
               color: primaryText,
               onPressed: () {
-                provider.Provider.of<SaveDataController>(context, listen: false)
+                provider.Provider.of<ProviderController>(context, listen: false)
                     .deleteAllData();
               },
               icon: Icon(Icons.clear_all_outlined)),
         ],
       ),
       body: SingleChildScrollView(
-        child: provider.Consumer<SaveDataController>(
+        child: provider.Consumer<ProviderController>(
           builder: (context, data, child) {
             return Column(
               children: [

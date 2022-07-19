@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/sawnawk_model.dart';
 
-class SaveDataController with ChangeNotifier {
+class ProviderController with ChangeNotifier {
   List<HymnModel> HymnsInStorage = [];
 
 //  Hymns data
