@@ -1,3 +1,4 @@
+import 'package:falamhymns/config/provider_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -11,14 +12,20 @@ void main() {
   globals.appNavigator = GlobalKey<NavigatorState>();
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(ProviderScope(child: MyApp()));
+  runApp(provider.MultiProvider(
+    providers: [
+      provider.ChangeNotifierProvider<ProviderController>(
+          create: (_) => ProviderController())
+    ],
+    child: ProviderScope(child: MyApp()),
+  ));
 }
 
 class MyApp extends HookWidget {
   @override
   Widget build(BuildContext context) {
     useEffect(() {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: Colors.black,
         systemNavigationBarColor: Colors.black,
       ));
