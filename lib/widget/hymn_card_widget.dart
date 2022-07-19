@@ -1,6 +1,8 @@
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HymnsCardWidget extends HookWidget {
@@ -39,14 +41,20 @@ class HymnsCardWidget extends HookWidget {
         height: 90,
         child: Card(
           elevation: 5,
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
           child: Column(
             children: [
-              SizedBox(height: 20),
+              SizedBox(
+                height: 20,
+                width: 40,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  SizedBox(
+                    width: 20,
+                  ),
                   Padding(
                       padding: EdgeInsets.all(8),
                       child: Text(

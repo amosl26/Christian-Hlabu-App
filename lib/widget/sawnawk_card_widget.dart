@@ -49,7 +49,7 @@ class SawnawkCardWidget extends HookWidget {
         height: 90,
         child: Card(
           elevation: 5,
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
           child: Column(
             children: [
               SizedBox(height: 5),
