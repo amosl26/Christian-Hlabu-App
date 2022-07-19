@@ -13,6 +13,7 @@ class ProviderController with ChangeNotifier {
   saveHymnModelInStorage({
     required int pageNumber,
     required int id,
+    required String category,
     required String songNumber,
     required String title,
     required bool bookmark,
@@ -23,7 +24,7 @@ class ProviderController with ChangeNotifier {
       return;
     }
     HymnsInStorage.add(
-        HymnModel(id, pageNumber, songNumber, title, null, bookmark));
+        HymnModel(id, pageNumber, songNumber, title, category, bookmark));
     notifyListeners();
     List<String> hymnsInStorageString = [];
     // get the last saved data and convert it to JSON string
@@ -52,7 +53,7 @@ class ProviderController with ChangeNotifier {
               makeTheDataMapAgine["pageNumber"],
               makeTheDataMapAgine["songNumber"],
               makeTheDataMapAgine["title"],
-              null,
+              makeTheDataMapAgine["category"],
               makeTheDataMapAgine["bookmark"]),
         );
       }

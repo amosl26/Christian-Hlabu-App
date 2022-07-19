@@ -50,6 +50,7 @@ class BookmarkScreen extends HookWidget {
                       title: data.HymnsInStorage[index].title,
                       bookmark: data.HymnsInStorage[index].bookmark,
                       songNumber: data.HymnsInStorage[index].songNumber,
+                      category: data.HymnsInStorage[index].category,
                     );
                   },
                 ),

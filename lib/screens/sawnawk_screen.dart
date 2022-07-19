@@ -36,7 +36,7 @@ class SawnawkScreen extends StatelessWidget {
           ],
         ),
         body: FutureBuilder(
-          future: ReadJsonDate(),
+          future: ReadSawnawkJsonData(),
           builder: (context, data) {
             if (data.hasError) {
               return Center(child: Text("${data.error}"));
@@ -63,7 +63,7 @@ class SawnawkScreen extends StatelessWidget {
   }
 }
 
-Future<List<SawnAwkModel>> ReadJsonDate() async {
+Future<List<SawnAwkModel>> ReadSawnawkJsonData() async {
   final jsondata =
       await rootBundle.rootBundle.loadString('assets/data/sawnawk_data.json');
   final list = json.decode(jsondata) as List<dynamic>;

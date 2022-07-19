@@ -2,7 +2,6 @@ import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SawnawkCardWidget extends HookWidget {
   final int pageNumber;
@@ -42,6 +41,7 @@ class SawnawkCardWidget extends HookWidget {
                         titleEnglish,
                         bookmark,
                       ),
+                      'null',
                       isHymns: false,
                     )))
       },
@@ -49,14 +49,19 @@ class SawnawkCardWidget extends HookWidget {
         height: 90,
         child: Card(
           elevation: 5,
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
           child: Column(
             children: [
-              SizedBox(height: 5),
+              SizedBox(
+                width: 20,
+              ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    width: 20,
+                  ),
                   Padding(
                       padding: EdgeInsets.all(8),
                       child: Text(
@@ -70,14 +75,24 @@ class SawnawkCardWidget extends HookWidget {
                       child: Text(
                         titleFalam,
                         style: TextStyle(
+                          fontSize: 13,
                           fontWeight: FontWeight.bold,
                         ),
                       )),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Text(titleEnglish.toString()),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 55,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Text(titleEnglish.toString()),
+                  ),
+                ],
               ),
             ],
           ),

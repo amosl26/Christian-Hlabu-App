@@ -36,7 +36,7 @@ class SongsScreen extends StatelessWidget {
           ],
         ),
         body: FutureBuilder(
-          future: ReadJsonDate(),
+          future: ReadHymnJsonData(),
           builder: (context, data) {
             if (data.hasError) {
               return Center(child: Text("${data.error}"));
@@ -52,6 +52,7 @@ class SongsScreen extends StatelessWidget {
                       title: items[index].title,
                       bookmark: items[index].bookmark,
                       songNumber: items[index].songNumber,
+                      category: items[index].category,
                     );
                   });
             } else {
@@ -62,7 +63,7 @@ class SongsScreen extends StatelessWidget {
   }
 }
 
-Future<List<HymnModel>> ReadJsonDate() async {
+Future<List<HymnModel>> ReadHymnJsonData() async {
   final jsondata =
       await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
   final list = json.decode(jsondata) as List<dynamic>;
