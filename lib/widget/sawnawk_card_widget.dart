@@ -2,7 +2,6 @@ import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SawnawkCardWidget extends HookWidget {
   final int pageNumber;
@@ -42,6 +41,7 @@ class SawnawkCardWidget extends HookWidget {
                         titleEnglish,
                         bookmark,
                       ),
+                      'null',
                       isHymns: false,
                     )))
       },

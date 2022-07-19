@@ -52,6 +52,7 @@ class SongsScreen extends StatelessWidget {
                       title: items[index].title,
                       bookmark: items[index].bookmark,
                       songNumber: items[index].songNumber,
+                      category: items[index].category,
                     );
                   });
             } else {

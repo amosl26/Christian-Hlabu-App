@@ -3,7 +3,7 @@ class HymnModel {
   late int pageNumber;
   late String songNumber;
   late String title;
-  String? category;
+  late String category;
   late bool bookmark;
 
   HymnModel(this.id, this.pageNumber, this.songNumber, this.title,
