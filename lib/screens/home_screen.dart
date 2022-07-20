@@ -17,33 +17,33 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<HymnModel> dataModel = [];
+  List<HymnModel> hymnModel = [];
   List<String> allCategory = [];
 
   Future getJson() async {
-    dataModel.clear();
+    hymnModel.clear();
     allCategory.clear();
 
     final String response =
         await rootBundle.loadString('assets/data/hymn_data.json');
     final data = await json.decode(response);
     for (int i = 0; i < data.length; i++) {
-      dataModel.add(HymnModel.fromJson(data[i]));
+      hymnModel.add(HymnModel.fromJson(data[i]));
     }
 
-    for (int i = 0; i < dataModel.length; i++) {
-      if (!allCategory.contains(dataModel[i].category)) {
-        allCategory.add(dataModel[i].category!);
+    for (int i = 0; i < hymnModel.length; i++) {
+      if (!allCategory.contains(hymnModel[i].category)) {
+        allCategory.add(hymnModel[i].category!);
       }
     }
     return true;
   }
 
-  List<HymnModel> getDataInSelectedGenre(String genre) {
+  List<HymnModel> getDataInSelectedCategory(String genre) {
     List<HymnModel> result = [];
-    for (int i = 0; i < dataModel.length; i++) {
-      if (dataModel[i].category!.toLowerCase() == genre.toLowerCase()) {
-        result.add(dataModel[i]);
+    for (int i = 0; i < hymnModel.length; i++) {
+      if (hymnModel[i].category!.toLowerCase() == genre.toLowerCase()) {
+        result.add(hymnModel[i]);
       }
     }
     return result;
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           return ListTile(
                             onTap: () {
                               List<HymnModel> data =
-                                  getDataInSelectedGenre(allCategory[index]);
+                                  getDataInSelectedCategory(allCategory[index]);
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) =>
                                       SubCategoryScreen(data: data)));
