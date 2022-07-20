@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SongsScreen extends StatelessWidget {
-  const SongsScreen({Key? key}) : super(key: key);
+class HymnsScreen extends StatelessWidget {
+  const HymnsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
