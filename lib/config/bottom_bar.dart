@@ -92,7 +92,7 @@ class _BottomBarState extends State<BottomBar>
           Container(
               height: MediaQuery.of(context).size.height, child: HomeScreen()),
           Container(
-              height: MediaQuery.of(context).size.height, child: SongsScreen()),
+              height: MediaQuery.of(context).size.height, child: HymnsScreen()),
           Container(
               height: MediaQuery.of(context).size.height,
               child: SawnawkScreen()),

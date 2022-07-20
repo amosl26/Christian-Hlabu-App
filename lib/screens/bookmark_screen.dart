@@ -13,6 +13,7 @@ class BookmarkScreen extends HookWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: primaryBg,
         centerTitle: false,
         title: Text(
@@ -20,10 +21,6 @@ class BookmarkScreen extends HookWidget {
           style: TextStyle(color: primaryText, fontSize: 17),
         ),
         actions: [
-          IconButton(
-              color: primaryText,
-              onPressed: () {},
-              icon: Icon(Icons.sort_by_alpha)),
           IconButton(
               color: primaryText,
               onPressed: () {

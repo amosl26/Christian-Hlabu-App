@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:provider/provider.dart' as provider;
 
-/// Represents Homepage for Navigation
 class DetailScreen extends StatefulWidget {
   final String songNumber;
   final int pageNumber;
@@ -37,6 +36,7 @@ class _DetailScreen extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: primaryBg,
         centerTitle: false,
         title: Text(

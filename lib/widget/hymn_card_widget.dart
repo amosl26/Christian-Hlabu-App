@@ -1,6 +1,8 @@
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HymnsCardWidget extends HookWidget {
   final int pageNumber;
@@ -38,43 +40,39 @@ class HymnsCardWidget extends HookWidget {
                     )))
       },
       child: Container(
-        height: 90,
-        child: Card(
-          elevation: 5,
-          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 20,
-                width: 40,
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+        margin: EdgeInsets.only(bottom: 0, left: 30, right: 30, top: 0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              child: Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      songNumber + '. ' + title,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Text(
-                        songNumber,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                  Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Text(
-                        title,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                ],
-              ),
-            ],
-          ),
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Container(
+              width: 17,
+              height: 17,
+              child: SvgPicture.asset(iconsPath + 'hello.svg',
+                  color: Colors.black),
+            ),
+          ],
         ),
       ),
     );

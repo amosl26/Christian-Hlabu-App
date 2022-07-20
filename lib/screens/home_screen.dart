@@ -1,59 +1,118 @@
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'dart:convert';
 
-/// Represents Homepage for Navigation
+import 'package:falamhymns/config/app_theme.dart';
+import 'package:falamhymns/models/hymn_model.dart';
+import 'package:falamhymns/screens/sub_screens/sub_category_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 class HomeScreen extends StatefulWidget {
+  static String routeName = "/mainscreen";
+
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
-  __HomeScreen createState() => __HomeScreen();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class __HomeScreen extends State<HomeScreen> {
-  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+class _HomeScreenState extends State<HomeScreen> {
+  List<HymnModel> hymnModel = [];
+  List<String> allCategory = [];
 
-  late PdfViewerController _pdfViewerController;
+  Future getJson() async {
+    hymnModel.clear();
+    allCategory.clear();
 
-  @override
-  void initState() {
-    _pdfViewerController = PdfViewerController();
-    super.initState();
+    final String response =
+        await rootBundle.loadString('assets/data/hymn_data.json');
+    final data = await json.decode(response);
+    for (int i = 0; i < data.length; i++) {
+      hymnModel.add(HymnModel.fromJson(data[i]));
+    }
+
+    for (int i = 0; i < hymnModel.length; i++) {
+      if (!allCategory.contains(hymnModel[i].category)) {
+        allCategory.add(hymnModel[i].category!);
+      }
+    }
+    return true;
+  }
+
+  List<HymnModel> getDataInSelectedCategory(String category) {
+    List<HymnModel> result = [];
+    for (int i = 0; i < hymnModel.length; i++) {
+      if (hymnModel[i].category!.toLowerCase() == category.toLowerCase()) {
+        result.add(hymnModel[i]);
+      }
+    }
+    return result;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: primaryBg,
-          centerTitle: false,
-          title: Text(
-            "Categories",
-            style: TextStyle(color: primaryText, fontSize: 17),
-          ),
-          actions: [
-            IconButton(
-              color: primaryText,
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                iconsPath + "search.svg",
-                color: primaryText,
-              ),
-            ),
-          ],
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: primaryBg,
+        centerTitle: false,
+        title: Text(
+          "Categories",
+          style: TextStyle(color: primaryText, fontSize: 17),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(32.0),
-                child: Text(
-                  "Home Screen",
-                  style: TextStyle(fontSize: 15),
-                ),
-              ),
-            ],
+        actions: [
+          IconButton(
+            color: primaryText,
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              iconsPath + "search.svg",
+              color: primaryText,
+            ),
           ),
-        ));
+        ],
+      ),
+      body: FutureBuilder(
+        future: getJson(),
+        builder: (BuildContext context, AsyncSnapshot snap) {
+          if (snap.hasData) {
+            if (snap.data == true) {
+              return Column(
+                children: [
+                  Expanded(
+                    child: ListView.separated(
+                        itemBuilder: (BuildContext context, index) {
+                          return ListTile(
+                            onTap: () {
+                              List<HymnModel> data =
+                                  getDataInSelectedCategory(allCategory[index]);
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      SubCategoryScreen(data: data)));
+                            },
+                            leading: Text(index.toString()),
+                            title: Text(allCategory[index]),
+                          );
+                        },
+                        separatorBuilder: (BuildContext context, index) {
+                          return SizedBox(
+                            height: 10,
+                          );
+                        },
+                        itemCount: allCategory.length),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              );
+            }
+          }
+          return CircularProgressIndicator();
+        },
+      ),
+    );
   }
 }
