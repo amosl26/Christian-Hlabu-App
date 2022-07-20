@@ -1,7 +1,9 @@
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SawnawkCardWidget extends HookWidget {
   final int pageNumber;
@@ -46,57 +48,48 @@ class SawnawkCardWidget extends HookWidget {
                     )))
       },
       child: Container(
-        height: 90,
-        child: Card(
-          elevation: 5,
-          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-          child: Column(
-            children: [
-              SizedBox(
-                width: 20,
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Padding(
-                      padding: EdgeInsets.all(8),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+        margin: EdgeInsets.only(bottom: 0, left: 30, right: 30, top: 0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              child: Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      sawnawkNumber + '. ' + titleFalam,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15),
+                    ),
+                    Container(
+                      width: 265,
                       child: Text(
-                        sawnawkNumber,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
-                      child: Text(
-                        titleFalam,
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                ],
+                        '    ' + titleEnglish,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: TextStyle(color: Colors.black, height: 1.3),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 50,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(0),
-                    child: Text(titleEnglish.toString()),
-                  ),
-                ],
-              ),
-            ],
-          ),
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Container(
+              width: 17,
+              height: 17,
+              child: SvgPicture.asset(iconsPath + 'hello.svg',
+                  color: Colors.black),
+            ),
+          ],
         ),
       ),
     );

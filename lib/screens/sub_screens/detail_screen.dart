@@ -37,6 +37,7 @@ class _DetailScreen extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: primaryBg,
         centerTitle: false,
         title: Text(

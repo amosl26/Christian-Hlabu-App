@@ -14,6 +14,7 @@ class SongsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: primaryBg,
           centerTitle: false,
           title: Text(
