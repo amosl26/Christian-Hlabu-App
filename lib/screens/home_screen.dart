@@ -39,10 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return true;
   }
 
-  List<HymnModel> getDataInSelectedCategory(String genre) {
+  List<HymnModel> getDataInSelectedCategory(String category) {
     List<HymnModel> result = [];
     for (int i = 0; i < hymnModel.length; i++) {
-      if (hymnModel[i].category!.toLowerCase() == genre.toLowerCase()) {
+      if (hymnModel[i].category!.toLowerCase() == category.toLowerCase()) {
         result.add(hymnModel[i]);
       }
     }
