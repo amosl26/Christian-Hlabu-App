@@ -1,17 +1,26 @@
 import 'dart:convert';
+import 'dart:ui';
 
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:falamhymns/widget/sawnawk_card_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
-class SawnawkScreen extends StatelessWidget {
-  const SawnawkScreen({Key? key}) : super(key: key);
+class SawnawkScreen extends StatefulWidget {
+  SawnawkScreen({Key? key}) : super(key: key);
 
   @override
+  State<SawnawkScreen> createState() => _SawnawkScreenState();
+}
+
+class _SawnawkScreenState extends State<SawnawkScreen> {
+  @override
   Widget build(BuildContext context) {
+    bool isSwitched = false;
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
