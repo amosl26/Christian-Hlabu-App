@@ -13,7 +13,8 @@ class AboutScreen extends StatelessWidget {
           centerTitle: false,
           title: Text(
             "About",
-            style: TextStyle(color: primaryText, fontSize: 17),
+            style: TextStyle(
+                color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
         body: Center(

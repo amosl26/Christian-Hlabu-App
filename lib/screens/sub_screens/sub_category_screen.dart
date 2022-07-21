@@ -31,8 +31,9 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "Sub Category",
-          style: TextStyle(color: primaryText, fontSize: 17),
+          widget.data[0].category,
+          style: TextStyle(
+              color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(

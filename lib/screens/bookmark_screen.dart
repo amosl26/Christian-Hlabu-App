@@ -18,7 +18,8 @@ class BookmarkScreen extends HookWidget {
         centerTitle: false,
         title: Text(
           "Bookmark",
-          style: TextStyle(color: primaryText, fontSize: 17),
+          style: TextStyle(
+              color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(

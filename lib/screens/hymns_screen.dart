@@ -7,9 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HymnsScreen extends StatelessWidget {
-  const HymnsScreen({Key? key}) : super(key: key);
+class HymnsScreen extends StatefulWidget {
+  HymnsScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HymnsScreen> createState() => _HymnsScreenState();
+}
+
+class _HymnsScreenState extends State<HymnsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +24,8 @@ class HymnsScreen extends StatelessWidget {
           centerTitle: false,
           title: Text(
             "All Hymns",
-            style: TextStyle(color: primaryText, fontSize: 17),
+            style: TextStyle(
+                color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
           ),
           actions: [
             IconButton(
