@@ -63,17 +63,17 @@ class SawnawkCardWidget extends HookWidget {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: TextStyle(
-                          color: Colors.black,
+                          color: primaryText,
                           fontWeight: FontWeight.w500,
                           fontSize: 15),
                     ),
                     Container(
                       width: 265,
                       child: Text(
-                        '    ' + titleEnglish,
+                        '     ' + titleEnglish,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
-                        style: TextStyle(color: Colors.black, height: 1.3),
+                        style: TextStyle(color: primaryText, height: 1.3),
                       ),
                     ),
                   ],
@@ -86,8 +86,8 @@ class SawnawkCardWidget extends HookWidget {
             Container(
               width: 17,
               height: 17,
-              child: SvgPicture.asset(iconsPath + 'hello.svg',
-                  color: Colors.black),
+              child:
+                  SvgPicture.asset(iconsPath + 'hello.svg', color: primaryText),
             ),
           ],
         ),

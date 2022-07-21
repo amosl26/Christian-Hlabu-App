@@ -55,7 +55,7 @@ class HymnsCardWidget extends HookWidget {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: TextStyle(
-                          color: Colors.black,
+                          color: primaryText,
                           fontWeight: FontWeight.w500,
                           fontSize: 15),
                     ),
@@ -69,8 +69,8 @@ class HymnsCardWidget extends HookWidget {
             Container(
               width: 17,
               height: 17,
-              child: SvgPicture.asset(iconsPath + 'hello.svg',
-                  color: Colors.black),
+              child:
+                  SvgPicture.asset(iconsPath + 'hello.svg', color: primaryText),
             ),
           ],
         ),

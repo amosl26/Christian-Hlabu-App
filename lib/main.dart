@@ -1,3 +1,4 @@
+import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/config/provider_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -26,19 +27,15 @@ class MyApp extends HookWidget {
   Widget build(BuildContext context) {
     useEffect(() {
       SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        statusBarColor: Colors.black,
-        systemNavigationBarColor: Colors.black,
+        statusBarColor: primaryText,
+        systemNavigationBarColor: primaryText,
       ));
     }, const []);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Circular",
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      darkTheme: ThemeData(
-        scaffoldBackgroundColor: Colors.red,
-        fontFamily: "Circular",
+        scaffoldBackgroundColor: primaryBg,
       ),
       home: Prepare(),
     );
