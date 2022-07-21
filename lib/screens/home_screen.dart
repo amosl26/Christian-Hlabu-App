@@ -60,16 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
           "Categories",
           style: TextStyle(color: primaryText, fontSize: 17),
         ),
-        actions: [
-          IconButton(
-            color: primaryText,
-            onPressed: () {},
-            icon: SvgPicture.asset(
-              iconsPath + "search.svg",
-              color: primaryText,
-            ),
-          ),
-        ],
       ),
       body: FutureBuilder(
         future: getJson(),
