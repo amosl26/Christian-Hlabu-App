@@ -49,7 +49,7 @@ class SawnawkCardWidget extends HookWidget {
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-        margin: EdgeInsets.only(bottom: 0, left: 30, right: 30, top: 0),
+        margin: EdgeInsets.only(bottom: 0, left: 20, right: 20, top: 0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
