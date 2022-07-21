@@ -70,7 +70,7 @@ class SawnawkCardWidget extends HookWidget {
                     Container(
                       width: 265,
                       child: Text(
-                        '    ' + titleEnglish,
+                        '     ' + titleEnglish,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: TextStyle(color: Colors.black, height: 1.3),
