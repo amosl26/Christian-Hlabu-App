@@ -32,7 +32,8 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
         ),
         title: Text(
           widget.data[0].category,
-          style: TextStyle(color: primaryText, fontSize: 17),
+          style: TextStyle(
+              color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(

@@ -28,7 +28,8 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
           centerTitle: false,
           title: Text(
             "Sawnawk Bible",
-            style: TextStyle(color: primaryText, fontSize: 17),
+            style: TextStyle(
+                color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
           ),
           actions: [
             IconButton(

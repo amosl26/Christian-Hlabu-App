@@ -24,7 +24,8 @@ class _HymnsScreenState extends State<HymnsScreen> {
           centerTitle: false,
           title: Text(
             "All Hymns",
-            style: TextStyle(color: primaryText, fontSize: 17),
+            style: TextStyle(
+                color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
           ),
           actions: [
             IconButton(

@@ -58,7 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: false,
         title: Text(
           "Categories",
-          style: TextStyle(color: primaryText, fontSize: 17),
+          style: TextStyle(
+              color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
       body: FutureBuilder(
