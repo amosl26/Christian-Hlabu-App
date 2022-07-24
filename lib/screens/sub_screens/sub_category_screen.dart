@@ -55,6 +55,7 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
               bookmark: widget.data[index].bookmark,
               songNumber: widget.data[index].songNumber,
               category: widget.data[index].category,
+              isVisible: false,
             );
             ;
           },

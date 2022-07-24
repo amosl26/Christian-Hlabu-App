@@ -11,6 +11,7 @@ class HymnsCardWidget extends HookWidget {
   final String category;
   final String title;
   bool bookmark;
+  bool isVisible;
 
   HymnsCardWidget({
     required this.id,
@@ -19,6 +20,7 @@ class HymnsCardWidget extends HookWidget {
     required this.bookmark,
     required this.category,
     required this.title,
+    required this.isVisible,
   });
 
   @override
@@ -41,10 +43,43 @@ class HymnsCardWidget extends HookWidget {
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-        margin: EdgeInsets.only(bottom: 0, left: 20, right: 20, top: 0),
+        margin: EdgeInsets.only(bottom: 0, left: 5, right: 10, top: 0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Visibility(
+              visible: isVisible,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(40.0),
+                        bottomRight: Radius.circular(40.0),
+                        topLeft: Radius.circular(40.0),
+                        bottomLeft: Radius.circular(40.0)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(5, 5),
+                        blurRadius: 1,
+                      ),
+                      BoxShadow(
+                          color: Colors.grey.shade200,
+                          offset: Offset(5, 5),
+                          blurRadius: 15,
+                          spreadRadius: 1)
+                    ]),
+                width: 25,
+                height: 25,
+                child: SvgPicture.asset(
+                  iconsPath + 'music2.svg',
+                  color: primaryText,
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 15,
+            ),
             Container(
               child: Expanded(
                 child: Column(

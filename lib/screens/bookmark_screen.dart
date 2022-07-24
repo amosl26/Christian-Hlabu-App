@@ -49,6 +49,7 @@ class BookmarkScreen extends HookWidget {
                       bookmark: data.HymnsInStorage[index].bookmark,
                       songNumber: data.HymnsInStorage[index].songNumber,
                       category: data.HymnsInStorage[index].category,
+                      isVisible: true,
                     );
                   },
                 ),
@@ -65,6 +66,7 @@ class BookmarkScreen extends HookWidget {
                       bookmark: data.SawnInStorage[index].bookmark,
                       sawnawkNumber: data.SawnInStorage[index].sawnawkNumber,
                       titleEnglish: data.SawnInStorage[index].titleEnglish,
+                      isVisible: true,
                     );
                   },
                 ),
