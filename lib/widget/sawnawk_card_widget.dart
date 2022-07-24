@@ -12,15 +12,16 @@ class SawnawkCardWidget extends HookWidget {
   final String titleFalam;
   final String titleEnglish;
   bool bookmark;
+  bool isVisible;
 
-  SawnawkCardWidget({
-    required this.id,
-    required this.pageNumber,
-    required this.sawnawkNumber,
-    required this.bookmark,
-    required this.titleFalam,
-    required this.titleEnglish,
-  });
+  SawnawkCardWidget(
+      {required this.id,
+      required this.pageNumber,
+      required this.sawnawkNumber,
+      required this.bookmark,
+      required this.titleFalam,
+      required this.titleEnglish,
+      required this.isVisible});
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +49,44 @@ class SawnawkCardWidget extends HookWidget {
                     )))
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-        margin: EdgeInsets.only(bottom: 0, left: 20, right: 20, top: 0),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        margin: EdgeInsets.only(bottom: 0, left: 5, right: 10, top: 0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Visibility(
+              visible: isVisible,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(40.0),
+                        bottomRight: Radius.circular(40.0),
+                        topLeft: Radius.circular(40.0),
+                        bottomLeft: Radius.circular(40.0)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        offset: Offset(5, 5),
+                        blurRadius: 1,
+                      ),
+                      BoxShadow(
+                          color: Colors.grey.shade200,
+                          offset: Offset(5, 5),
+                          blurRadius: 15,
+                          spreadRadius: 1)
+                    ]),
+                width: 25,
+                height: 25,
+                child: SvgPicture.asset(
+                  iconsPath + 'bible.svg',
+                  color: primaryText,
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 15,
+            ),
             Container(
               child: Expanded(
                 child: Column(
