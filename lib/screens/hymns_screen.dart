@@ -34,7 +34,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
             onPressed: () {},
             icon: SvgPicture.asset(
               iconsPath + "search.svg",
-              color: selectedColor,
+              color: primaryText,
             ),
           ),
         ],
@@ -90,7 +90,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
           SpeedDialChild(
             child: SvgPicture.asset(
               iconsPath + "search.svg",
-              color: selectedColor,
+              color: primaryText,
             ),
             label: 'Search by number or title',
             backgroundColor: Colors.white,
