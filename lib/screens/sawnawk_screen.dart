@@ -35,7 +35,7 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
             onPressed: () {},
             icon: SvgPicture.asset(
               iconsPath + "search.svg",
-              color: selectedColor,
+              color: primaryText,
             ),
           ),
         ],
@@ -91,7 +91,7 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
           SpeedDialChild(
             child: SvgPicture.asset(
               iconsPath + "search.svg",
-              color: selectedColor,
+              color: primaryText,
             ),
             label: 'Search by number or title',
             backgroundColor: Colors.white,
