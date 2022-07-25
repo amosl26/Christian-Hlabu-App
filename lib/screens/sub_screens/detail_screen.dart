@@ -135,7 +135,7 @@ class _DetailScreen extends State<DetailScreen> {
         pageSpacing: 4,
         canShowScrollHead: false,
         onDocumentLoaded: (details) {
-          _pdfViewerController.jumpToPage(widget.pageNumber);
+          _pdfViewerController.jumpToPage(18);
         },
       ),
     );
