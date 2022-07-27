@@ -40,7 +40,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
         ],
       ),
       body: FutureBuilder(
-        future: ReadHymnJsonData(),
+        future: SortHymbyNumber(),
         builder: (context, data) {
           if (data.hasError) {
             return Center(child: Text("${data.error}"));
@@ -102,10 +102,25 @@ class _HymnsScreenState extends State<HymnsScreen> {
   }
 }
 
-Future<List<HymnModel>> ReadHymnJsonData() async {
+Future<List<HymnModel>> SortHymbyNumber() async {
   final jsondata =
       await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
   final list = json.decode(jsondata) as List<dynamic>;
 
   return list.map((e) => HymnModel.fromJson(e)).toList();
 }
+
+// Future<List<HymnModel>> SortHymbyAlphabet() async {
+//   final jsondata =
+//       await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
+//   final list = json.decode(jsondata) as List<dynamic>;
+
+//   list.map((e) => HymnModel.fromJson(e)).toList();
+//   List<HymnModel> title = list.map((e) => HymnModel.fromJson(e)).toList();
+
+//   title.sort((a, b) {
+//     return a.title.toLowerCase().compareTo(b.title.toLowerCase());
+//   });
+
+//   return title;
+// }
