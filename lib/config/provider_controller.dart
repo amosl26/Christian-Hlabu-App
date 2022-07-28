@@ -20,7 +20,6 @@ class ProviderController with ChangeNotifier {
   }) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     if (HymnsInStorage.indexWhere((element) => element.id == id) != -1) {
-      print("exist in storage");
       return;
     }
     HymnsInStorage.add(
@@ -41,7 +40,6 @@ class ProviderController with ChangeNotifier {
     List<String>? hymnsDataStringFormat =
         sharedPreferences.getStringList("hymns");
     if (hymnsDataStringFormat == null) {
-      print("is null for sum reason");
       return;
     }
     if (hymnsDataStringFormat.isNotEmpty) {
@@ -103,7 +101,6 @@ class ProviderController with ChangeNotifier {
   }) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     if (SawnInStorage.indexWhere((element) => element.id == id) != -1) {
-      print("exist in storage");
       return;
     }
     SawnInStorage.add(SawnAwkModel(
@@ -117,7 +114,6 @@ class ProviderController with ChangeNotifier {
     }
     // update the phone Storage with The New One with All the Data
     sharedPreferences.setStringList("swan", SawnInStorageString);
-    print(sharedPreferences.getStringList("swan"));
   }
 
   getSwanDataFromStorage() async {
@@ -125,7 +121,6 @@ class ProviderController with ChangeNotifier {
     List<String>? swanDataStringFormat =
         sharedPreferences.getStringList("swan");
     if (swanDataStringFormat == null) {
-      print("is null for sum reason");
       return;
     }
     if (swanDataStringFormat.isNotEmpty) {

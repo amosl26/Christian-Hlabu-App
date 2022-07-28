@@ -110,3 +110,17 @@ Future<List<SawnAwkModel>> ReadSawnawkJsonData() async {
 
   return list.map((e) => SawnAwkModel.fromJson(e)).toList();
 }
+
+// Future<List<SawnAwkModel>> SortSawnawkbyAlphabet() async {
+//   final jsondata =
+//       await rootBundle.rootBundle.loadString('assets/data/sawnawk_data.json');
+//   final list = json.decode(jsondata) as List<dynamic>;
+
+//   List<SawnAwkModel> title = list.map((e) => SawnAwkModel.fromJson(e)).toList();
+
+//   title.sort((a, b) {
+//     return a.titleFalam.toLowerCase().compareTo(b.titleFalam.toLowerCase());
+//   });
+
+//   return title;
+// }
