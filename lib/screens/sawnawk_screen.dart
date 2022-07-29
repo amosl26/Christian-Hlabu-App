@@ -1,5 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controller/sort_controller.dart';
+import 'package:falamhymns/controller/main_controller.dart';
 import 'package:falamhymns/widget/sawnawk_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
@@ -37,10 +37,10 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
           ),
         ],
       ),
-      body: provider.Consumer<SortController>(
+      body: provider.Consumer<MainController>(
         builder: (context, data, child) {
           if (data.sawnawkItems.isEmpty) {
-            data.readSawnawkJsonData();
+            data.getSawnawkJsonData();
             return const Center(child: CircularProgressIndicator());
           }
           if (data.sawnawkItems.isNotEmpty) {
@@ -79,7 +79,7 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
               backgroundColor: Colors.white,
               label: 'Sort by alphabet',
               onTap: () async {
-                provider.Provider.of<SortController>(context, listen: false)
+                provider.Provider.of<MainController>(context, listen: false)
                     .sortSawnawkbyAlphabet();
               }),
           SpeedDialChild(
@@ -87,7 +87,7 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
               backgroundColor: Colors.white,
               label: 'Sort by number',
               onTap: () async {
-                provider.Provider.of<SortController>(context, listen: false)
+                provider.Provider.of<MainController>(context, listen: false)
                     .sortHymnByNumbers();
               }),
           SpeedDialChild(

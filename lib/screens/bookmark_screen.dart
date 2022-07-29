@@ -40,15 +40,15 @@ class BookmarkScreen extends HookWidget {
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
-                  itemCount: data.HymnsInStorage.length,
+                  itemCount: data.hymnsInStorage.length,
                   itemBuilder: (BuildContext context, int index) {
                     return HymnsCardWidget(
-                      id: data.HymnsInStorage[index].id!,
-                      pageNumber: data.HymnsInStorage[index].pageNumber,
-                      title: data.HymnsInStorage[index].title,
-                      bookmark: data.HymnsInStorage[index].bookmark,
-                      songNumber: data.HymnsInStorage[index].songNumber,
-                      category: data.HymnsInStorage[index].category,
+                      id: data.hymnsInStorage[index].id!,
+                      pageNumber: data.hymnsInStorage[index].pageNumber,
+                      title: data.hymnsInStorage[index].title,
+                      bookmark: data.hymnsInStorage[index].bookmark,
+                      songNumber: data.hymnsInStorage[index].songNumber,
+                      category: data.hymnsInStorage[index].category,
                       isVisible: true,
                     );
                   },
