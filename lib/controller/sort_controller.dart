@@ -9,13 +9,6 @@ class SortController with ChangeNotifier {
   List<HymnModel> hymnItems = [];
   List<SawnAwkModel> sawnawkItems = [];
 
-  sortSawnawkByNumbers() async {
-    sawnawkItems.sort((a, b) {
-      return a.id!.compareTo(b.id!);
-    });
-    notifyListeners();
-  }
-
   readHymnJsonData() async {
     final jsondata =
         await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
@@ -53,6 +46,13 @@ class SortController with ChangeNotifier {
   sortSawnawkbyAlphabet() async {
     sawnawkItems.sort((a, b) {
       return a.titleFalam.toLowerCase().compareTo(b.titleFalam.toLowerCase());
+    });
+    notifyListeners();
+  }
+
+  sortSawnawkByNumbers() async {
+    sawnawkItems.sort((a, b) {
+      return a.id!.compareTo(b.id!);
     });
     notifyListeners();
   }
