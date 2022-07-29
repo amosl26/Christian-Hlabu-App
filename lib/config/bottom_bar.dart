@@ -1,9 +1,7 @@
 import 'package:falamhymns/config/app_theme.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-
 import '../screens/about_screen.dart';
 import '../screens/bookmark_screen.dart';
 import '../screens/home_screen.dart';
@@ -34,9 +32,9 @@ class _BottomBarState extends State<BottomBar>
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(iconsPath + "music2.svg", color: selectedColor),
+        icon: SvgPicture.asset(iconsPath + "music.svg", color: selectedColor),
         inactiveIcon: SvgPicture.asset(
-          iconsPath + "music2.svg",
+          iconsPath + "music.svg",
           color: unselectedColor,
         ),
       ),

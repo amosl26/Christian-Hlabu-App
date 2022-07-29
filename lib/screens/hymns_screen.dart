@@ -1,11 +1,7 @@
-import 'dart:convert';
-
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/controller/sort_controller.dart';
-import 'package:falamhymns/models/hymn_model.dart';
 import 'package:falamhymns/widget/hymn_card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart' as provider;
