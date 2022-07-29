@@ -69,12 +69,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           .allCategory
                           .length),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
               ],
             );
           }
