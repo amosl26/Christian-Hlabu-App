@@ -72,7 +72,7 @@ class HymnsCardWidget extends HookWidget {
                 width: 25,
                 height: 25,
                 child: SvgPicture.asset(
-                  iconsPath + 'music2.svg',
+                  iconsPath + 'music.svg',
                   color: primaryText,
                 ),
               ),
@@ -104,8 +104,8 @@ class HymnsCardWidget extends HookWidget {
             Container(
               width: 17,
               height: 17,
-              child:
-                  SvgPicture.asset(iconsPath + 'hello.svg', color: primaryText),
+              child: SvgPicture.asset(iconsPath + 'right-arrow.svg',
+                  color: primaryText),
             ),
           ],
         ),

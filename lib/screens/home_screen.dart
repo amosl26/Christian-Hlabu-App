@@ -1,15 +1,11 @@
 import 'dart:convert';
-
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/models/hymn_model.dart';
 import 'package:falamhymns/screens/sub_screens/sub_category_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
-  static String routeName = "/mainscreen";
-
   const HomeScreen({Key? key}) : super(key: key);
 
   @override

@@ -120,8 +120,8 @@ class SawnawkCardWidget extends HookWidget {
             Container(
               width: 17,
               height: 17,
-              child:
-                  SvgPicture.asset(iconsPath + 'hello.svg', color: primaryText),
+              child: SvgPicture.asset(iconsPath + 'right-arrow.svg',
+                  color: primaryText),
             ),
           ],
         ),
