@@ -1,5 +1,5 @@
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/config/provider_controller.dart';
+import 'package:falamhymns/controller/bookmark_controller.dart';
+import 'package:falamhymns/controller/sort_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -15,8 +15,10 @@ void main() {
 
   runApp(provider.MultiProvider(
     providers: [
-      provider.ChangeNotifierProvider<ProviderController>(
-          create: (_) => ProviderController())
+      provider.ChangeNotifierProvider<BookmarkController>(
+          create: (_) => BookmarkController()),
+      provider.ChangeNotifierProvider<SortController>(
+          create: (_) => SortController())
     ],
     child: ProviderScope(child: MyApp()),
   ));
@@ -27,15 +29,19 @@ class MyApp extends HookWidget {
   Widget build(BuildContext context) {
     useEffect(() {
       SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        statusBarColor: primaryText,
-        systemNavigationBarColor: primaryText,
+        statusBarColor: Colors.black,
+        systemNavigationBarColor: Colors.black,
       ));
     }, const []);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Circular",
-        scaffoldBackgroundColor: primaryBg,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      darkTheme: ThemeData(
+        scaffoldBackgroundColor: Colors.red,
+        fontFamily: "Circular",
       ),
       home: Prepare(),
     );

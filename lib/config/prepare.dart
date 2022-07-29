@@ -1,4 +1,4 @@
-import 'package:falamhymns/config/provider_controller.dart';
+import 'package:falamhymns/controller/bookmark_controller.dart';
 import 'package:provider/provider.dart' as provider;
 import 'package:falamhymns/config/app_theme.dart';
 
@@ -14,9 +14,9 @@ class Prepare extends HookWidget {
   Widget build(BuildContext context) {
     startSequence() async {
       await Hive.initFlutter();
-      await provider.Provider.of<ProviderController>(context, listen: false)
+      await provider.Provider.of<BookmarkController>(context, listen: false)
           .getHymnesDataFromStorage();
-      await provider.Provider.of<ProviderController>(context, listen: false)
+      await provider.Provider.of<BookmarkController>(context, listen: false)
           .getSwanDataFromStorage();
       var box = await Hive.openBox('appBox');
 

@@ -1,12 +1,14 @@
 import 'dart:convert';
 
 import 'package:falamhymns/config/app_theme.dart';
+import 'package:falamhymns/controller/sort_controller.dart';
 import 'package:falamhymns/models/hymn_model.dart';
 import 'package:falamhymns/widget/hymn_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart' as provider;
 
 class HymnsScreen extends StatefulWidget {
   HymnsScreen({Key? key}) : super(key: key);
@@ -39,54 +41,58 @@ class _HymnsScreenState extends State<HymnsScreen> {
           ),
         ],
       ),
-      body: FutureBuilder(
-        future: SortHymbyNumber(),
-        builder: (context, data) {
-          if (data.hasError) {
-            return Center(child: Text("${data.error}"));
-          } else if (data.hasData) {
-            var items = data.data as List<HymnModel>;
-
-            return ListView.builder(
-                itemCount: items == null ? 0 : items.length,
-                itemBuilder: (context, index) {
-                  return HymnsCardWidget(
-                    id: items[index].id!,
-                    pageNumber: items[index].pageNumber,
-                    title: items[index].title,
-                    bookmark: items[index].bookmark,
-                    songNumber: items[index].songNumber,
-                    category: items[index].category,
-                    isVisible: false,
-                  );
-                });
-          } else {
-            return Center(child: CircularProgressIndicator());
+      body: provider.Consumer<SortController>(
+        builder: (context, data, child) {
+          if (data.hymnItems.isEmpty) {
+            data.readHymnJsonData();
+            return const Center(child: CircularProgressIndicator());
           }
+          if (data.hymnItems.isNotEmpty) {
+            return ListView.builder(
+              itemCount: data.hymnItems.length,
+              itemBuilder: (context, index) {
+                return HymnsCardWidget(
+                  id: data.hymnItems[index].id!,
+                  pageNumber: data.hymnItems[index].pageNumber,
+                  title: data.hymnItems[index].title,
+                  bookmark: data.hymnItems[index].bookmark,
+                  songNumber: data.hymnItems[index].songNumber,
+                  category: data.hymnItems[index].category,
+                  isVisible: false,
+                );
+              },
+            );
+          }
+          return const Center(child: Text("Error, Try Refresh The Page"));
         },
       ),
       floatingActionButton: SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
-        animatedIconTheme: IconThemeData(size: 22.0),
+        animatedIconTheme: const IconThemeData(size: 22.0),
         curve: Curves.bounceIn,
         overlayColor: Colors.black,
         overlayOpacity: 0.5,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         elevation: 8.0,
-        shape: CircleBorder(),
+        shape: const CircleBorder(),
         children: [
           SpeedDialChild(
-              child: Icon(Icons.sort_by_alpha_outlined),
+              child: const Icon(Icons.sort_by_alpha_outlined),
               backgroundColor: Colors.white,
               label: 'Sort by alphabet',
-              onTap: () => print('FIRST CHILD')),
+              onTap: () async {
+                provider.Provider.of<SortController>(context, listen: false)
+                    .sortHymnbyAlphabet();
+              }),
           SpeedDialChild(
-            child: Icon(Icons.format_list_numbered),
-            backgroundColor: Colors.white,
-            label: 'Sort by number',
-            onTap: () => print('SECOND CHILD'),
-          ),
+              child: const Icon(Icons.format_list_numbered),
+              backgroundColor: Colors.white,
+              label: 'Sort by number',
+              onTap: () async {
+                provider.Provider.of<SortController>(context, listen: false)
+                    .sortHymnByNumbers();
+              }),
           SpeedDialChild(
             child: SvgPicture.asset(
               iconsPath + "search.svg",
@@ -101,26 +107,3 @@ class _HymnsScreenState extends State<HymnsScreen> {
     );
   }
 }
-
-Future<List<HymnModel>> SortHymbyNumber() async {
-  final jsondata =
-      await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
-  final list = json.decode(jsondata) as List<dynamic>;
-
-  return list.map((e) => HymnModel.fromJson(e)).toList();
-}
-
-// Future<List<HymnModel>> SortHymbyAlphabet() async {
-//   final jsondata =
-//       await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
-//   final list = json.decode(jsondata) as List<dynamic>;
-
-//   list.map((e) => HymnModel.fromJson(e)).toList();
-//   List<HymnModel> title = list.map((e) => HymnModel.fromJson(e)).toList();
-
-//   title.sort((a, b) {
-//     return a.title.toLowerCase().compareTo(b.title.toLowerCase());
-//   });
-
-//   return title;
-// }

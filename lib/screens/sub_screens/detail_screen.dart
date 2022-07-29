@@ -1,5 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/config/provider_controller.dart';
+import 'package:falamhymns/controller/bookmark_controller.dart';
 import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -61,7 +61,7 @@ class _DetailScreen extends State<DetailScreen> {
             color: primaryText,
             icon: Icon(Icons.arrow_forward),
           ),
-          provider.Consumer<ProviderController>(
+          provider.Consumer<BookmarkController>(
             builder: (context, data, child) {
               bool marked;
               if (widget.isHymns) {

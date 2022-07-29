@@ -1,5 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/config/provider_controller.dart';
+import 'package:falamhymns/controller/bookmark_controller.dart';
 import 'package:falamhymns/widget/hymn_card_widget.dart';
 import 'package:falamhymns/widget/sawnawk_card_widget.dart';
 import 'package:flutter/material.dart';
@@ -25,14 +25,14 @@ class BookmarkScreen extends HookWidget {
           IconButton(
               color: primaryText,
               onPressed: () {
-                provider.Provider.of<ProviderController>(context, listen: false)
+                provider.Provider.of<BookmarkController>(context, listen: false)
                     .deleteAllData();
               },
               icon: Icon(Icons.clear_all_outlined)),
         ],
       ),
       body: SingleChildScrollView(
-        child: provider.Consumer<ProviderController>(
+        child: provider.Consumer<BookmarkController>(
           builder: (context, data, child) {
             return Column(
               children: [
