@@ -1,5 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controller/sort_controller.dart';
+import 'package:falamhymns/controller/main_controller.dart';
 import 'package:falamhymns/widget/hymn_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
@@ -37,10 +37,10 @@ class _HymnsScreenState extends State<HymnsScreen> {
           ),
         ],
       ),
-      body: provider.Consumer<SortController>(
+      body: provider.Consumer<MainController>(
         builder: (context, data, child) {
           if (data.hymnItems.isEmpty) {
-            data.readHymnJsonData();
+            data.getHymnJsonData();
             return const Center(child: CircularProgressIndicator());
           }
           if (data.hymnItems.isNotEmpty) {
@@ -59,7 +59,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
               },
             );
           }
-          return const Center(child: Text("Error, Try Refresh The Page"));
+          return const Center(child: Text("Error, Try refresh the screen"));
         },
       ),
       floatingActionButton: SpeedDial(
@@ -78,7 +78,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
               backgroundColor: Colors.white,
               label: 'Sort by alphabet',
               onTap: () async {
-                provider.Provider.of<SortController>(context, listen: false)
+                provider.Provider.of<MainController>(context, listen: false)
                     .sortHymnbyAlphabet();
               }),
           SpeedDialChild(
@@ -86,7 +86,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
               backgroundColor: Colors.white,
               label: 'Sort by number',
               onTap: () async {
-                provider.Provider.of<SortController>(context, listen: false)
+                provider.Provider.of<MainController>(context, listen: false)
                     .sortHymnByNumbers();
               }),
           SpeedDialChild(

@@ -4,11 +4,46 @@ import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
-class SortController with ChangeNotifier {
+class MainController with ChangeNotifier {
   List<HymnModel> hymnItems = [];
   List<SawnAwkModel> sawnawkItems = [];
 
-  readHymnJsonData() async {
+  List<HymnModel> hymnModel = [];
+  List<String> allCategory = [];
+
+  getHymnCategory() async {
+    hymnModel.clear();
+    allCategory.clear();
+
+    final String response =
+        await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
+    final data = await json.decode(response);
+    for (int i = 0; i < data.length; i++) {
+      hymnModel.add(HymnModel.fromJson(data[i]));
+    }
+
+    for (int i = 0; i < hymnModel.length; i++) {
+      if (!allCategory.contains(hymnModel[i].category)) {
+        allCategory.add(hymnModel[i].category!);
+      }
+    }
+
+    notifyListeners();
+    return true;
+  }
+
+  List<HymnModel> getDataInSelectedCategory(String category) {
+    List<HymnModel> result = [];
+    for (int i = 0; i < hymnModel.length; i++) {
+      if (hymnModel[i].category!.toLowerCase() == category.toLowerCase()) {
+        result.add(hymnModel[i]);
+      }
+    }
+    notifyListeners();
+    return result;
+  }
+
+  getHymnJsonData() async {
     final jsondata =
         await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
     final list = json.decode(jsondata) as List<dynamic>;
@@ -32,7 +67,7 @@ class SortController with ChangeNotifier {
     notifyListeners();
   }
 
-  readSawnawkJsonData() async {
+  getSawnawkJsonData() async {
     final jsondata =
         await rootBundle.rootBundle.loadString('assets/data/sawnawk_data.json');
     final list = json.decode(jsondata) as List<dynamic>;

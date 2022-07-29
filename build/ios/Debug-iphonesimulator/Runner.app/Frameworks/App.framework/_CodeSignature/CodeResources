@@ -36,21 +36,9 @@
 		<data>
 		m6EsNt1KuMvryIEDXlzB33vz6oo=
 		</data>
-		<key>flutter_assets/assets/icons/Icon.svg</key>
-		<data>
-		DNxZHEU4njntODrTgIxgR+jGsbE=
-		</data>
 		<key>flutter_assets/assets/icons/about.svg</key>
 		<data>
 		fG0yrTLwxUrs72tU/JqSXykmCb0=
-		</data>
-		<key>flutter_assets/assets/icons/arrow-left.svg</key>
-		<data>
-		nEbK+SZJGxE8HyyHYv4sPHf0x34=
-		</data>
-		<key>flutter_assets/assets/icons/arrow-right.svg</key>
-		<data>
-		Z4HXJ+zk3vGJkkQRW2rtnlH8Rck=
 		</data>
 		<key>flutter_assets/assets/icons/bible.svg</key>
 		<data>
@@ -59,10 +47,6 @@
 		<key>flutter_assets/assets/icons/bookmark.svg</key>
 		<data>
 		/28mI0TwO1CVL45rfALvaVDOoCc=
-		</data>
-		<key>flutter_assets/assets/icons/category.svg</key>
-		<data>
-		fXKEpPpWUnuY4Nsid85xA5OC2xg=
 		</data>
 		<key>flutter_assets/assets/icons/cheveron-down.svg</key>
 		<data>
@@ -75,14 +59,6 @@
 		<key>flutter_assets/assets/icons/close.svg</key>
 		<data>
 		ixQE4zb2kWr9eb7t7ccpd+oGqdU=
-		</data>
-		<key>flutter_assets/assets/icons/exclamation-circle.svg</key>
-		<data>
-		aSnDgbIbQJlFRHeKLUqwAbIZEp8=
-		</data>
-		<key>flutter_assets/assets/icons/hello.svg</key>
-		<data>
-		tDlF3iTgbGCbP4lt54Oq3IixvUw=
 		</data>
 		<key>flutter_assets/assets/icons/home.svg</key>
 		<data>
@@ -114,7 +90,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		Mzkk3UK54reMS0YxCVsm+Yh634w=
+		3g3Sqfsj7HyEQVISGVC6FxHCeno=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -193,17 +169,6 @@
 			ImeJTeaB7VfyQFzB58Pkz5FPWaRk5pfgHtzXhwK1fpQ=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/icons/Icon.svg</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DNxZHEU4njntODrTgIxgR+jGsbE=
-			</data>
-			<key>hash2</key>
-			<data>
-			MzJlv0n2rIeGg+HqoC+kBeNOAbIZ7Ra8zaV/zqmhgMc=
-			</data>
-		</dict>
 		<key>flutter_assets/assets/icons/about.svg</key>
 		<dict>
 			<key>hash</key>
@@ -213,28 +178,6 @@
 			<key>hash2</key>
 			<data>
 			vttF5Wy1cv0efXXzaFQgvRhXovvIUM6kDeefVsrDsaE=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/icons/arrow-left.svg</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nEbK+SZJGxE8HyyHYv4sPHf0x34=
-			</data>
-			<key>hash2</key>
-			<data>
-			tFur76q8snXGD/e3jOE3y/ODHCLd6BebSdJYOnfgVcE=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/icons/arrow-right.svg</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Z4HXJ+zk3vGJkkQRW2rtnlH8Rck=
-			</data>
-			<key>hash2</key>
-			<data>
-			QD+gRyvrj6LP9MTC/is/Vfe/LDbSmVn90kerBclf2xg=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/icons/bible.svg</key>
@@ -257,17 +200,6 @@
 			<key>hash2</key>
 			<data>
 			aGINpmX4EKI7e2ui4i2ZIxLobUpMh1XxIInmK8ohDv8=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/icons/category.svg</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fXKEpPpWUnuY4Nsid85xA5OC2xg=
-			</data>
-			<key>hash2</key>
-			<data>
-			sAJbNN46dvTRn5zRi8P+a3CPS/a67iPpbAKKVGUW08Y=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/icons/cheveron-down.svg</key>
@@ -301,28 +233,6 @@
 			<key>hash2</key>
 			<data>
 			XItvxhOM42tDdB9dl4TAEjb3+UNG6DjMFG1n6XIm8Z4=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/icons/exclamation-circle.svg</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			aSnDgbIbQJlFRHeKLUqwAbIZEp8=
-			</data>
-			<key>hash2</key>
-			<data>
-			MmVTzGIBbun6btnXDfcZsIocWyrnYj5kN610MpzOK+U=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/icons/hello.svg</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			tDlF3iTgbGCbP4lt54Oq3IixvUw=
-			</data>
-			<key>hash2</key>
-			<data>
-			qgZ9TcnIGexIWuADKDtWwZEQ9AoVFM2k/FjEHzD4JIE=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/icons/home.svg</key>
@@ -406,11 +316,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Mzkk3UK54reMS0YxCVsm+Yh634w=
+			3g3Sqfsj7HyEQVISGVC6FxHCeno=
 			</data>
 			<key>hash2</key>
 			<data>
-			XQ1eZxSSbQxALf8iVIvQ95TJSfGkmDOxYz5fUMOMUWU=
+			NRS7uB8W/asWTCyPRDJJ0Ii+pj8t2j5i+2AOccEavEg=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

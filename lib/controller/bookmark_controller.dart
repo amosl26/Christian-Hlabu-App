@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/sawnawk_model.dart';
 
 class BookmarkController with ChangeNotifier {
-  List<HymnModel> HymnsInStorage = [];
+  List<HymnModel> hymnsInStorage = [];
 
 //  Hymns data
   saveHymnModelInStorage({
@@ -17,16 +17,16 @@ class BookmarkController with ChangeNotifier {
     required bool bookmark,
   }) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    if (HymnsInStorage.indexWhere((element) => element.id == id) != -1) {
+    if (hymnsInStorage.indexWhere((element) => element.id == id) != -1) {
       return;
     }
-    HymnsInStorage.add(
-        HymnModel(id, pageNumber, songNumber, title, category, bookmark));
+    hymnsInStorage
+        .add(HymnModel(id, pageNumber, songNumber, title, category, bookmark));
     notifyListeners();
     List<String> hymnsInStorageString = [];
     // get the last saved data and convert it to JSON string
-    for (var i = 0; i < HymnsInStorage.length; i++) {
-      var stringData = converthymnsDataToString(HymnsInStorage[i]);
+    for (var i = 0; i < hymnsInStorage.length; i++) {
+      var stringData = converthymnsDataToString(hymnsInStorage[i]);
       hymnsInStorageString.add(stringData);
     }
     // update the phone Storage with The New One with All the Data
@@ -43,7 +43,7 @@ class BookmarkController with ChangeNotifier {
     if (hymnsDataStringFormat.isNotEmpty) {
       for (var i = 0; i < hymnsDataStringFormat.length; i++) {
         var makeTheDataMapAgine = jsonDecode(hymnsDataStringFormat[i]);
-        HymnsInStorage.add(
+        hymnsInStorage.add(
           HymnModel(
               makeTheDataMapAgine["id"],
               makeTheDataMapAgine["pageNumber"],
@@ -68,11 +68,11 @@ class BookmarkController with ChangeNotifier {
 
   removerHymnsFromStorage(int id) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    HymnsInStorage.removeWhere((element) => element.id == id);
+    hymnsInStorage.removeWhere((element) => element.id == id);
     notifyListeners();
     List<String> hymnsInStorageString = [];
-    for (var i = 0; i < HymnsInStorage.length; i++) {
-      var stringData = converthymnsDataToString(HymnsInStorage[i]);
+    for (var i = 0; i < hymnsInStorage.length; i++) {
+      var stringData = converthymnsDataToString(hymnsInStorage[i]);
       hymnsInStorageString.add(stringData);
     }
     // update the phone Storage with The New One with All the Data
@@ -84,7 +84,7 @@ class BookmarkController with ChangeNotifier {
   deleteAllData() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.clear();
-    HymnsInStorage.clear();
+    hymnsInStorage.clear();
     SawnInStorage.clear();
     notifyListeners();
   }

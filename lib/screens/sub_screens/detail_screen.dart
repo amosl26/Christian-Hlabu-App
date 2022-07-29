@@ -65,8 +65,8 @@ class _DetailScreen extends State<DetailScreen> {
             builder: (context, data, child) {
               bool marked;
               if (widget.isHymns) {
-                if (data.HymnsInStorage.indexWhere(
-                        (element) => element.id == widget.id) ==
+                if (data.hymnsInStorage
+                        .indexWhere((element) => element.id == widget.id) ==
                     -1) {
                   marked = false;
                 } else {
