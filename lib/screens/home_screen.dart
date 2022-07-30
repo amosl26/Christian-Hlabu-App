@@ -1,8 +1,10 @@
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/controllers/main_controller.dart';
 import 'package:falamhymns/models/hymn_model.dart';
+import 'package:falamhymns/screens/about_screen.dart';
 import 'package:falamhymns/screens/sub_screens/sub_category_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart' as provider;
 
 class HomeScreen extends StatefulWidget {
@@ -25,6 +27,23 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(
               color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AboutScreen()));
+              }, // Image tapped
+              child: Image.asset(
+                iconsPath + 'info2.png',
+                color: primaryText,
+                height: 5,
+                width: 25,
+              ),
+            ),
+          ),
+        ],
       ),
       body: provider.Consumer<MainController>(
         builder: (context, data, child) {
