@@ -16,6 +16,10 @@ class AboutScreen extends StatelessWidget {
             style: TextStyle(
                 color: primaryText, fontSize: 20, fontWeight: FontWeight.bold),
           ),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new, color: primaryText),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
         ),
         body: Center(
           child: Text('About Screen'),

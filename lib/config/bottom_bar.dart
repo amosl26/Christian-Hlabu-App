@@ -25,10 +25,12 @@ class _BottomBarState extends State<BottomBar>
         icon: SvgPicture.asset(
           iconsPath + "home.svg",
           color: selectedColor,
+          height: 28,
         ),
         inactiveIcon: SvgPicture.asset(
           iconsPath + "home.svg",
           color: unselectedColor,
+          height: 28,
         ),
       ),
       PersistentBottomNavBarItem(
@@ -36,13 +38,16 @@ class _BottomBarState extends State<BottomBar>
         inactiveIcon: SvgPicture.asset(
           iconsPath + "music.svg",
           color: unselectedColor,
+          height: 25,
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(iconsPath + "bible.svg", color: selectedColor),
+        icon: SvgPicture.asset(iconsPath + "bible.svg",
+            height: 23, color: selectedColor),
         inactiveIcon: SvgPicture.asset(
           iconsPath + "bible.svg",
           color: unselectedColor,
+          height: 23,
         ),
       ),
       PersistentBottomNavBarItem(
@@ -51,16 +56,7 @@ class _BottomBarState extends State<BottomBar>
         inactiveIcon: SvgPicture.asset(
           iconsPath + "bookmark.svg",
           color: unselectedColor,
-        ),
-      ),
-      PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(
-          iconsPath + "about.svg",
-          color: selectedColor,
-        ),
-        inactiveIcon: SvgPicture.asset(
-          iconsPath + "about.svg",
-          color: unselectedColor,
+          height: 25,
         ),
       ),
     ];
@@ -84,7 +80,7 @@ class _BottomBarState extends State<BottomBar>
         handleAndroidBackButtonPress: true,
         resizeToAvoidBottomInset: true,
         stateManagement: true,
-        navBarStyle: NavBarStyle.simple,
+        navBarStyle: NavBarStyle.style3,
         items: _navBarsItems(),
         screens: [
           Container(
@@ -97,8 +93,6 @@ class _BottomBarState extends State<BottomBar>
           Container(
               height: MediaQuery.of(context).size.height,
               child: BookmarkScreen()),
-          Container(
-              height: MediaQuery.of(context).size.height, child: AboutScreen()),
         ],
       ),
     );
