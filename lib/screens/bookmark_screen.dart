@@ -30,7 +30,7 @@ class BookmarkScreen extends HookWidget {
                   .deleteAllData();
             },
             icon: SvgPicture.asset(
-              iconsPath + "clear1.svg",
+              iconsPath + "clear.svg",
               color: primaryText,
             ),
           ),
