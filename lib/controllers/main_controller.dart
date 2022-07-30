@@ -7,24 +7,22 @@ import 'package:flutter/services.dart' as rootBundle;
 class MainController with ChangeNotifier {
   List<HymnModel> hymnItems = [];
   List<SawnAwkModel> sawnawkItems = [];
-
-  List<HymnModel> hymnModel = [];
   List<String> allCategory = [];
 
   getHymnCategory() async {
-    hymnModel.clear();
+    hymnItems.clear();
     allCategory.clear();
 
     final String response =
         await rootBundle.rootBundle.loadString('assets/data/hymn_data.json');
     final data = await json.decode(response);
     for (int i = 0; i < data.length; i++) {
-      hymnModel.add(HymnModel.fromJson(data[i]));
+      hymnItems.add(HymnModel.fromJson(data[i]));
     }
 
-    for (int i = 0; i < hymnModel.length; i++) {
-      if (!allCategory.contains(hymnModel[i].category)) {
-        allCategory.add(hymnModel[i].category!);
+    for (int i = 0; i < hymnItems.length; i++) {
+      if (!allCategory.contains(hymnItems[i].category)) {
+        allCategory.add(hymnItems[i].category!);
       }
     }
 
@@ -34,9 +32,9 @@ class MainController with ChangeNotifier {
 
   List<HymnModel> getDataInSelectedCategory(String category) {
     List<HymnModel> result = [];
-    for (int i = 0; i < hymnModel.length; i++) {
-      if (hymnModel[i].category!.toLowerCase() == category.toLowerCase()) {
-        result.add(hymnModel[i]);
+    for (int i = 0; i < hymnItems.length; i++) {
+      if (hymnItems[i].category!.toLowerCase() == category.toLowerCase()) {
+        result.add(hymnItems[i]);
       }
     }
     notifyListeners();

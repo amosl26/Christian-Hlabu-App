@@ -1,5 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controller/bookmark_controller.dart';
+import 'package:falamhymns/controllers/bookmark_controller.dart';
 import 'package:falamhymns/widget/hymn_card_widget.dart';
 import 'package:falamhymns/widget/sawnawk_card_widget.dart';
 import 'package:flutter/material.dart';
