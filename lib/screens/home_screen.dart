@@ -4,7 +4,6 @@ import 'package:falamhymns/models/hymn_model.dart';
 import 'package:falamhymns/screens/about_screen.dart';
 import 'package:falamhymns/screens/sub_screens/sub_category_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart' as provider;
 
 class HomeScreen extends StatefulWidget {
