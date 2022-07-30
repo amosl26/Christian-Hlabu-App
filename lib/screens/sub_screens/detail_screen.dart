@@ -1,5 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controller/bookmark_controller.dart';
+import 'package:falamhymns/controllers/bookmark_controller.dart';
 import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';

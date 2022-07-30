@@ -1,4 +1,4 @@
-import 'package:falamhymns/controller/bookmark_controller.dart';
+import 'package:falamhymns/controllers/bookmark_controller.dart';
 import 'package:provider/provider.dart' as provider;
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:flutter/material.dart';

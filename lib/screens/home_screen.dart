@@ -1,5 +1,5 @@
 import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controller/main_controller.dart';
+import 'package:falamhymns/controllers/main_controller.dart';
 import 'package:falamhymns/models/hymn_model.dart';
 import 'package:falamhymns/screens/sub_screens/sub_category_screen.dart';
 import 'package:flutter/material.dart';
@@ -28,11 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: provider.Consumer<MainController>(
         builder: (context, data, child) {
-          if (data.hymnModel.isEmpty) {
+          if (data.hymnItems.isEmpty) {
             data.getHymnCategory();
             return const Center(child: CircularProgressIndicator());
           }
-          if (data.hymnModel.isNotEmpty) {
+          if (data.hymnItems.isNotEmpty) {
             return Column(
               children: [
                 Expanded(
