@@ -88,7 +88,7 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
               label: 'Sort by number',
               onTap: () async {
                 provider.Provider.of<MainController>(context, listen: false)
-                    .sortHymnByNumbers();
+                    .sortSawnawkByNumbers();
               }),
           SpeedDialChild(
             child: SvgPicture.asset(

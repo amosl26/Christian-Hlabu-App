@@ -4,6 +4,7 @@ import 'package:falamhymns/widget/hymn_card_widget.dart';
 import 'package:falamhymns/widget/sawnawk_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart' as provider;
 
 class BookmarkScreen extends HookWidget {
@@ -23,12 +24,16 @@ class BookmarkScreen extends HookWidget {
         ),
         actions: [
           IconButton(
+            color: primaryText,
+            onPressed: () {
+              provider.Provider.of<BookmarkController>(context, listen: false)
+                  .deleteAllData();
+            },
+            icon: SvgPicture.asset(
+              iconsPath + "clear.svg",
               color: primaryText,
-              onPressed: () {
-                provider.Provider.of<BookmarkController>(context, listen: false)
-                    .deleteAllData();
-              },
-              icon: Icon(Icons.clear_all_outlined)),
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
