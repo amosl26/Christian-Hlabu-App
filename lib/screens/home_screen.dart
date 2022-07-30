@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+            padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
             child: GestureDetector(
               onTap: () {
                 Navigator.push(context,
