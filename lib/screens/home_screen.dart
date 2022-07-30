@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 iconsPath + 'info2.png',
                 color: primaryText,
                 height: 5,
-                width: 25,
+                width: 23,
               ),
             ),
           ),

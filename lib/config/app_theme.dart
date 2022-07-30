@@ -10,5 +10,5 @@ const primaryDark = Color(0xFF111111);
 const primaryBg = Color.fromARGB(255, 255, 255, 255);
 
 //tabBar icon
-const selectedColor = Color.fromARGB(255, 3, 115, 235);
+const selectedColor = Color.fromARGB(255, 3, 104, 212);
 const unselectedColor = Color.fromARGB(255, 3, 0, 0);
