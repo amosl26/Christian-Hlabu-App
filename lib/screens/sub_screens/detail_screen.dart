@@ -4,6 +4,9 @@ import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:provider/provider.dart' as provider;
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:printing/printing.dart';
 
 class DetailScreen extends StatefulWidget {
   final String songNumber;
@@ -119,7 +122,7 @@ class _DetailScreen extends State<DetailScreen> {
             },
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: _createPdf,
             color: primaryText,
             icon: Icon(Icons.print_outlined),
           ),
@@ -140,4 +143,23 @@ class _DetailScreen extends State<DetailScreen> {
       ),
     );
   }
+}
+
+// create PDF & print it
+void _createPdf() async {
+  final doc = pw.Document();
+  doc.addPage(
+    pw.Page(
+      pageFormat: PdfPageFormat.a4,
+      build: (pw.Context context) {
+        return pw.Center(
+          child: pw.Text(''),
+        );
+      },
+    ),
+  );
+
+  // share the document to other applications:
+  await Printing.sharePdf(
+      bytes: await doc.save(), filename: 'Khrihfa Hlabu.pdf');
 }
