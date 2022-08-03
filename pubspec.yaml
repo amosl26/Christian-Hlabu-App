@@ -46,6 +46,9 @@ dependencies:
   toggle_switch: ^2.0.1
   flutter_launcher_icons: ^0.9.3
   flutter_speed_dial: ^6.0.0
+  screenshot: ^1.2.3
+  share: ^2.0.4
+  path_provider: ^2.0.11
 
 flutter_icons:
     android: true
