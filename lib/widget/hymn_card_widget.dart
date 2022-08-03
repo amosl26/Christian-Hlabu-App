@@ -98,15 +98,6 @@ class HymnsCardWidget extends HookWidget {
                 ),
               ),
             ),
-            SizedBox(
-              width: 5,
-            ),
-            Container(
-              width: 17,
-              height: 17,
-              child: SvgPicture.asset(iconsPath + 'right-arrow.svg',
-                  color: primaryText),
-            ),
           ],
         ),
       ),
