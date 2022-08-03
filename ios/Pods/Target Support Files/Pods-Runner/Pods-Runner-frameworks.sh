@@ -178,6 +178,7 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/path_provider_ios/path_provider_ios.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/printing/printing.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/share/share.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_ios/shared_preferences_ios.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/syncfusion_flutter_pdfviewer/syncfusion_flutter_pdfviewer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/url_launcher_ios/url_launcher_ios.framework"
@@ -185,6 +186,7 @@ fi
 if [[ "$CONFIGURATION" == "Profile" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/path_provider_ios/path_provider_ios.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/printing/printing.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/share/share.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_ios/shared_preferences_ios.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/syncfusion_flutter_pdfviewer/syncfusion_flutter_pdfviewer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/url_launcher_ios/url_launcher_ios.framework"
@@ -192,6 +194,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/path_provider_ios/path_provider_ios.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/printing/printing.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/share/share.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_ios/shared_preferences_ios.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/syncfusion_flutter_pdfviewer/syncfusion_flutter_pdfviewer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/url_launcher_ios/url_launcher_ios.framework"

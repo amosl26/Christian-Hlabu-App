@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/syncfusion_flutter_pdfviewer-Swift.h</key>
 		<data>
-		twI4EzmbPdcbzcdGnyWMXFojC9I=
+		skkwGaWsZ61botgnPy3+eW8bqVc=
 		</data>
 		<key>Headers/syncfusion_flutter_pdfviewer-umbrella.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		szMwErRhkJC0xW+DXjEG7Z7vwPs=
+		9uE72uIAZ3FTp0d0nn1W2zuuRsM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -26,51 +26,27 @@
 		</data>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		22j3ZntpCn5Z+FuWjI5hNjX1YZU=
-		</data>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/Project/arm64.swiftsourceinfo</key>
-		<data>
-		22j3ZntpCn5Z+FuWjI5hNjX1YZU=
+		s4mzpuMUwNJm/PGNOME+e5KW1aQ=
 		</data>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		21LA0fzecQGxVYHwTLxGmsgcTOo=
-		</data>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/Project/x86_64.swiftsourceinfo</key>
-		<data>
-		21LA0fzecQGxVYHwTLxGmsgcTOo=
+		4d40+TN1RCAwTGBbS6WN8tSC6Ss=
 		</data>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xUvLt3I/RhbQPb9MpbGPk+jqNe8=
+		+hWBfH2/SUWW86CjidsICqTngEY=
 		</data>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		wUHGMZQkDv3gz+IRNEK1Pm9jaAs=
-		</data>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		xUvLt3I/RhbQPb9MpbGPk+jqNe8=
-		</data>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		wUHGMZQkDv3gz+IRNEK1Pm9jaAs=
+		PSyceKv1Y8bqyu/9zjG9ExUd/OQ=
 		</data>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		sl0OTcXAcUJrZyeVIwhTY7ecwUs=
+		9XxlzAMjHkYiwFe05UEDeaFOYNw=
 		</data>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UKYx6dfOnZjQzw85ba2ULzg4WMo=
-		</data>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		sl0OTcXAcUJrZyeVIwhTY7ecwUs=
-		</data>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		UKYx6dfOnZjQzw85ba2ULzg4WMo=
+		PvBnXuAaKhx3zkIBwC/4PnD2q+w=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -90,11 +66,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			twI4EzmbPdcbzcdGnyWMXFojC9I=
+			skkwGaWsZ61botgnPy3+eW8bqVc=
 			</data>
 			<key>hash2</key>
 			<data>
-			N5Ww8oRPUCQH+Jz4dDAoEfmHnQ6C9tCbhuGjJQiN+W8=
+			1gOGZ9weEp/JUbJTi+AHLcaWa+YH3Q81NTZD+7R5VPg=
 			</data>
 		</dict>
 		<key>Headers/syncfusion_flutter_pdfviewer-umbrella.h</key>
@@ -123,132 +99,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			22j3ZntpCn5Z+FuWjI5hNjX1YZU=
+			s4mzpuMUwNJm/PGNOME+e5KW1aQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Za6WNI2+oG12IyAt/+9bP0QP4YklES27zmog6Gupkqk=
-			</data>
-		</dict>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/Project/arm64.swiftsourceinfo</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			22j3ZntpCn5Z+FuWjI5hNjX1YZU=
-			</data>
-			<key>hash2</key>
-			<data>
-			Za6WNI2+oG12IyAt/+9bP0QP4YklES27zmog6Gupkqk=
+			UAf75PidE7OsfwgVoYoID8Cmk8lb6TfvphBsiOPmusc=
 			</data>
 		</dict>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			21LA0fzecQGxVYHwTLxGmsgcTOo=
+			4d40+TN1RCAwTGBbS6WN8tSC6Ss=
 			</data>
 			<key>hash2</key>
 			<data>
-			JaIJYiSJ099Ow459LklYYsIxy9PiyVFcdcXVjcnM9gE=
-			</data>
-		</dict>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/Project/x86_64.swiftsourceinfo</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			21LA0fzecQGxVYHwTLxGmsgcTOo=
-			</data>
-			<key>hash2</key>
-			<data>
-			JaIJYiSJ099Ow459LklYYsIxy9PiyVFcdcXVjcnM9gE=
+			Acusarng4GXEDZbv2u95px+kvdgSXmQLO+u8GbnktP8=
 			</data>
 		</dict>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xUvLt3I/RhbQPb9MpbGPk+jqNe8=
+			+hWBfH2/SUWW86CjidsICqTngEY=
 			</data>
 			<key>hash2</key>
 			<data>
-			lnroYAJR6YfqRvesmL2wm3I9yHLCvUTQqtAxsqKfyhc=
+			NBfwYO66q4gZ2XUnUGh5U9n4mp4ikuGkqaWmzuYT4+g=
 			</data>
 		</dict>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wUHGMZQkDv3gz+IRNEK1Pm9jaAs=
+			PSyceKv1Y8bqyu/9zjG9ExUd/OQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			VjiGp+H5wyuLXGb+7oJd99/BybzT5ha6sorIQ0Kai6g=
-			</data>
-		</dict>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xUvLt3I/RhbQPb9MpbGPk+jqNe8=
-			</data>
-			<key>hash2</key>
-			<data>
-			lnroYAJR6YfqRvesmL2wm3I9yHLCvUTQqtAxsqKfyhc=
-			</data>
-		</dict>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wUHGMZQkDv3gz+IRNEK1Pm9jaAs=
-			</data>
-			<key>hash2</key>
-			<data>
-			VjiGp+H5wyuLXGb+7oJd99/BybzT5ha6sorIQ0Kai6g=
+			yHePwqV9r42+hrFd56+kXQjfGZ6ybkylhWUxoIu1VcY=
 			</data>
 		</dict>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sl0OTcXAcUJrZyeVIwhTY7ecwUs=
+			9XxlzAMjHkYiwFe05UEDeaFOYNw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Aek23fkYhqQxZ/jwJSeKzu/TQA+EHk/PYclVLYzSi/M=
+			EVvO6v7CxIHhKxb0aMT6ca5IIALsmK/ZUOTQUdgwt2Q=
 			</data>
 		</dict>
 		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UKYx6dfOnZjQzw85ba2ULzg4WMo=
+			PvBnXuAaKhx3zkIBwC/4PnD2q+w=
 			</data>
 			<key>hash2</key>
 			<data>
-			gdZp17wpnp0RnM8FYA7TMIfirVvUQpQ4EMil7hzreD4=
-			</data>
-		</dict>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sl0OTcXAcUJrZyeVIwhTY7ecwUs=
-			</data>
-			<key>hash2</key>
-			<data>
-			Aek23fkYhqQxZ/jwJSeKzu/TQA+EHk/PYclVLYzSi/M=
-			</data>
-		</dict>
-		<key>Modules/syncfusion_flutter_pdfviewer.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UKYx6dfOnZjQzw85ba2ULzg4WMo=
-			</data>
-			<key>hash2</key>
-			<data>
-			gdZp17wpnp0RnM8FYA7TMIfirVvUQpQ4EMil7hzreD4=
+			XndDEKaAwDJJ+vSP/5z5MdxQKdabhv8jVot5K7Ut/40=
 			</data>
 		</dict>
 	</dict>

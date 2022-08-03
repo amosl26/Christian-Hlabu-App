@@ -1,12 +1,15 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/controllers/bookmark_controller.dart';
 import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:screenshot/screenshot.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:provider/provider.dart' as provider;
-import 'package:pdf/pdf.dart';
-import 'package:pdf/widgets.dart' as pw;
-import 'package:printing/printing.dart';
+import 'package:share/share.dart';
 
 class DetailScreen extends StatefulWidget {
   final String songNumber;
@@ -26,6 +29,9 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreen extends State<DetailScreen> {
+  // For screenshot and printing
+  final _screenshotController = ScreenshotController();
+
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
   late PdfViewerController _pdfViewerController;
 
@@ -121,45 +127,39 @@ class _DetailScreen extends State<DetailScreen> {
               );
             },
           ),
+          //Print/Share Button
           IconButton(
-            onPressed: _createPdf,
+            onPressed: _takeScreenshot,
             color: primaryText,
             icon: Icon(Icons.print_outlined),
           ),
         ],
       ),
-      body: SfPdfViewer.asset(
-        'assets/data/christianhlabu.pdf',
-        initialZoomLevel: 3.0,
-        enableDoubleTapZooming: true,
-        initialScrollOffset: Offset.fromDirection(10),
-        controller: _pdfViewerController,
-        pageLayoutMode: PdfPageLayoutMode.single,
-        pageSpacing: 4,
-        canShowScrollHead: false,
-        onDocumentLoaded: (details) {
-          _pdfViewerController.jumpToPage(widget.pageNumber);
-        },
+      body: Screenshot(
+        controller: _screenshotController,
+        child: SfPdfViewer.asset(
+          'assets/data/christianhlabu.pdf',
+          initialZoomLevel: 3.0,
+          enableDoubleTapZooming: true,
+          initialScrollOffset: Offset.fromDirection(10),
+          controller: _pdfViewerController,
+          pageLayoutMode: PdfPageLayoutMode.single,
+          pageSpacing: 4,
+          canShowScrollHead: false,
+          onDocumentLoaded: (details) {
+            _pdfViewerController.jumpToPage(widget.pageNumber);
+          },
+        ),
       ),
     );
   }
-}
 
-// create PDF & print it
-void _createPdf() async {
-  final doc = pw.Document();
-  doc.addPage(
-    pw.Page(
-      pageFormat: PdfPageFormat.a4,
-      build: (pw.Context context) {
-        return pw.Center(
-          child: pw.Text(''),
-        );
-      },
-    ),
-  );
-
-  // share the document to other applications:
-  await Printing.sharePdf(
-      bytes: await doc.save(), filename: 'Khrihfa Hlabu.pdf');
+  //screenshot Function
+  void _takeScreenshot() async {
+    final uint8List = await _screenshotController.capture();
+    String tempPath = (await getTemporaryDirectory()).path;
+    File file = File('$tempPath/image.png');
+    await file.writeAsBytes(uint8List!);
+    await Share.shareFiles([file.path]);
+  }
 }
