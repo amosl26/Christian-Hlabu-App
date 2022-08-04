@@ -10,14 +10,13 @@ class HymnsCardWidget extends HookWidget {
   final String songNumber;
   final String category;
   final String title;
-  bool bookmark;
+
   bool isVisible;
 
   HymnsCardWidget({
     required this.id,
     required this.pageNumber,
     required this.songNumber,
-    required this.bookmark,
     required this.category,
     required this.title,
     required this.isVisible,
@@ -34,7 +33,6 @@ class HymnsCardWidget extends HookWidget {
                       id,
                       pageNumber,
                       title,
-                      bookmark,
                       songNumber,
                       null,
                       category,

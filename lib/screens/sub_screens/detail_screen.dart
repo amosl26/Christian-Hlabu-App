@@ -13,10 +13,9 @@ class DetailScreen extends StatefulWidget {
   final bool isHymns;
   final String category;
   final SawnAwkModel? sawnawk;
-  bool bookmark;
 
-  DetailScreen(this.id, this.pageNumber, this.title, this.bookmark,
-      this.songNumber, this.sawnawk, this.category,
+  DetailScreen(this.id, this.pageNumber, this.title, this.songNumber,
+      this.sawnawk, this.category,
       {required this.isHymns});
   @override
   _DetailScreen createState() => _DetailScreen();
@@ -94,7 +93,6 @@ class _DetailScreen extends State<DetailScreen> {
                         songNumber: widget.songNumber,
                         title: widget.title,
                         category: widget.category,
-                        bookmark: widget.bookmark,
                       );
                     }
                   } else {
@@ -102,12 +100,12 @@ class _DetailScreen extends State<DetailScreen> {
                       await data.removerSawnFromStorage(widget.id);
                     } else {
                       await data.saveSawnModelInStorage(
-                          pageNumber: widget.pageNumber,
-                          id: widget.id,
-                          sawnawkNumber: widget.sawnawk!.sawnawkNumber,
-                          titleFalam: widget.sawnawk!.titleFalam,
-                          titleEnglish: widget.sawnawk!.titleEnglish,
-                          bookmark: widget.bookmark);
+                        pageNumber: widget.pageNumber,
+                        id: widget.id,
+                        sawnawkNumber: widget.sawnawk!.sawnawkNumber,
+                        titleFalam: widget.sawnawk!.titleFalam,
+                        titleEnglish: widget.sawnawk!.titleEnglish,
+                      );
                     }
                   }
                 },

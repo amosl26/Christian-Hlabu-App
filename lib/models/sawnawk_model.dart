@@ -4,10 +4,9 @@ class SawnAwkModel {
   late String sawnawkNumber;
   late String titleFalam;
   late String titleEnglish;
-  late bool bookmark;
 
   SawnAwkModel(this.id, this.pageNumber, this.sawnawkNumber, this.titleFalam,
-      this.titleEnglish, this.bookmark);
+      this.titleEnglish);
 
   SawnAwkModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -15,6 +14,5 @@ class SawnAwkModel {
     sawnawkNumber = json['sawnawkNumber'];
     titleFalam = json['titleFalam'];
     titleEnglish = json['titleEnglish'];
-    bookmark = json['bookmark'];
   }
 }

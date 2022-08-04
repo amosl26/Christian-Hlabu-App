@@ -62,7 +62,6 @@ class _HymnsScreenState extends State<HymnsScreen> {
                       id: data.hymnItems[index].id!,
                       pageNumber: data.hymnItems[index].pageNumber,
                       title: data.hymnItems[index].title,
-                      bookmark: data.hymnItems[index].bookmark,
                       songNumber: data.hymnItems[index].songNumber,
                       category: data.hymnItems[index].category,
                       isVisible: false,

@@ -58,7 +58,6 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
                       id: data.sawnawkItems[index].id!,
                       pageNumber: data.sawnawkItems[index].pageNumber,
                       titleFalam: data.sawnawkItems[index].titleFalam,
-                      bookmark: data.sawnawkItems[index].bookmark,
                       sawnawkNumber: data.sawnawkItems[index].sawnawkNumber,
                       titleEnglish: data.sawnawkItems[index].titleEnglish,
                       isVisible: false,

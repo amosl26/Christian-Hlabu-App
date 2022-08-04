@@ -11,14 +11,13 @@ class SawnawkCardWidget extends HookWidget {
   final String sawnawkNumber;
   final String titleFalam;
   final String titleEnglish;
-  bool bookmark;
+
   bool isVisible;
 
   SawnawkCardWidget(
       {required this.id,
       required this.pageNumber,
       required this.sawnawkNumber,
-      required this.bookmark,
       required this.titleFalam,
       required this.titleEnglish,
       required this.isVisible});
@@ -34,7 +33,7 @@ class SawnawkCardWidget extends HookWidget {
                       id,
                       pageNumber,
                       titleFalam,
-                      bookmark,
+                
                       sawnawkNumber,
                       SawnAwkModel(
                         id,
@@ -42,7 +41,6 @@ class SawnawkCardWidget extends HookWidget {
                         sawnawkNumber,
                         titleFalam,
                         titleEnglish,
-                        bookmark,
                       ),
                       'null',
                       isHymns: false,
