@@ -119,7 +119,7 @@ class _DetailScreen extends State<DetailScreen> {
           IconButton(
             onPressed: () {},
             color: primaryText,
-            icon: Icon(Icons.print_outlined),
+            icon: Icon(Icons.share_outlined),
           ),
         ],
       ),
