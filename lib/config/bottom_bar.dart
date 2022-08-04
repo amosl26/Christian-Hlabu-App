@@ -2,7 +2,6 @@ import 'package:falamhymns/config/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-import '../screens/about_screen.dart';
 import '../screens/bookmark_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/sawnawk_screen.dart';

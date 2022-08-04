@@ -1,7 +1,7 @@
 import 'package:falamhymns/config/app_theme.dart';
 import 'package:falamhymns/controllers/bookmark_controller.dart';
-import 'package:falamhymns/widget/hymn_card_widget.dart';
-import 'package:falamhymns/widget/sawnawk_card_widget.dart';
+import 'package:falamhymns/widgets/hymn_card_widget.dart';
+import 'package:falamhymns/widgets/sawnawk_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -51,7 +51,6 @@ class BookmarkScreen extends HookWidget {
                       id: data.hymnsInStorage[index].id!,
                       pageNumber: data.hymnsInStorage[index].pageNumber,
                       title: data.hymnsInStorage[index].title,
-                      bookmark: data.hymnsInStorage[index].bookmark,
                       songNumber: data.hymnsInStorage[index].songNumber,
                       category: data.hymnsInStorage[index].category,
                       isVisible: true,
@@ -68,7 +67,6 @@ class BookmarkScreen extends HookWidget {
                       id: data.SawnInStorage[index].id!,
                       pageNumber: data.SawnInStorage[index].pageNumber,
                       titleFalam: data.SawnInStorage[index].titleFalam,
-                      bookmark: data.SawnInStorage[index].bookmark,
                       sawnawkNumber: data.SawnInStorage[index].sawnawkNumber,
                       titleEnglish: data.SawnInStorage[index].titleEnglish,
                       isVisible: true,

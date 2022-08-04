@@ -1,27 +1,26 @@
 import 'package:falamhymns/config/app_theme.dart';
+import 'package:falamhymns/models/sawnawk_model.dart';
 import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HymnsCardWidget extends HookWidget {
+class SawnawkCardWidget extends HookWidget {
   final int pageNumber;
   final int id;
-  final String songNumber;
-  final String category;
-  final String title;
-  bool bookmark;
+  final String sawnawkNumber;
+  final String titleFalam;
+  final String titleEnglish;
+
   bool isVisible;
 
-  HymnsCardWidget({
-    required this.id,
-    required this.pageNumber,
-    required this.songNumber,
-    required this.bookmark,
-    required this.category,
-    required this.title,
-    required this.isVisible,
-  });
+  SawnawkCardWidget(
+      {required this.id,
+      required this.pageNumber,
+      required this.sawnawkNumber,
+      required this.titleFalam,
+      required this.titleEnglish,
+      required this.isVisible});
 
   @override
   Widget build(BuildContext context) {
@@ -33,16 +32,22 @@ class HymnsCardWidget extends HookWidget {
                 builder: (context) => DetailScreen(
                       id,
                       pageNumber,
-                      title,
-                      bookmark,
-                      songNumber,
-                      null,
-                      category,
-                      isHymns: true,
+                      titleFalam,
+                
+                      sawnawkNumber,
+                      SawnAwkModel(
+                        id,
+                        pageNumber,
+                        sawnawkNumber,
+                        titleFalam,
+                        titleEnglish,
+                      ),
+                      'null',
+                      isHymns: false,
                     )))
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         margin: EdgeInsets.only(bottom: 0, left: 5, right: 10, top: 0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,7 +77,7 @@ class HymnsCardWidget extends HookWidget {
                 width: 25,
                 height: 25,
                 child: SvgPicture.asset(
-                  iconsPath + 'music.svg',
+                  iconsPath + 'bible.svg',
                   color: primaryText,
                 ),
               ),
@@ -86,7 +91,7 @@ class HymnsCardWidget extends HookWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      songNumber + '. ' + title,
+                      sawnawkNumber + '. ' + titleFalam,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: TextStyle(
@@ -94,18 +99,18 @@ class HymnsCardWidget extends HookWidget {
                           fontWeight: FontWeight.w500,
                           fontSize: 15),
                     ),
+                    Container(
+                      width: 265,
+                      child: Text(
+                        '     ' + titleEnglish,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: TextStyle(color: primaryText, height: 1.3),
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ),
-            SizedBox(
-              width: 5,
-            ),
-            Container(
-              width: 17,
-              height: 17,
-              child: SvgPicture.asset(iconsPath + 'right-arrow.svg',
-                  color: primaryText),
             ),
           ],
         ),
