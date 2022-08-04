@@ -69,65 +69,100 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
                 data.sortTypeSawna == SortTypeForSawna.sortByAlpabet
                     ? Positioned(
                         right: 10,
-                        child: SizedBox(
-                          height: 300,
-                          width: 50,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            itemCount: data.alphabetsExistForSawnawk.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return InkWell(
-                                onTap: () {
-                                  int jumpToThis = data.sawnawkItems.indexWhere(
-                                      (element) => element.titleFalam
-                                          .startsWith(
-                                              data.alphabetsExistForSawnawk[
-                                                  index]));
-                                  itemScrollController.jumpTo(
-                                      index: jumpToThis);
-                                },
-                                child: SizedBox(
-                                  height: 30,
-                                  child: Center(
-                                    child: Text(
-                                      data.alphabetsExistForSawnawk[index],
-                                      textAlign: TextAlign.center,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF),
+                              borderRadius: BorderRadius.circular(5),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.shade200,
+                                  offset: Offset(5, 5),
+                                  blurRadius: 1,
+                                ),
+                                BoxShadow(
+                                    color: Colors.grey.shade200,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 15,
+                                    spreadRadius: 1)
+                              ]),
+                          child: SizedBox(
+                            height: 300,
+                            width: 50,
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: data.alphabetsExistForSawnawk.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return InkWell(
+                                  onTap: () {
+                                    int jumpToThis = data.sawnawkItems
+                                        .indexWhere((element) =>
+                                            element.titleFalam.startsWith(
+                                                data.alphabetsExistForSawnawk[
+                                                    index]));
+                                    itemScrollController.jumpTo(
+                                        index: jumpToThis);
+                                  },
+                                  child: Container(
+                                    child: SizedBox(
+                                      height: 30,
+                                      child: Center(
+                                        child: Text(
+                                          data.alphabetsExistForSawnawk[index],
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            },
+                                );
+                              },
+                            ),
                           ),
                         ),
                       )
                     : Positioned(
                         right: 10,
-                        child: SizedBox(
-                          height: 300,
-                          width: 50,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            itemCount: data.numbersExitForSawna.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return InkWell(
-                                onTap: () {
-                                  itemScrollController.jumpTo(
-                                      index: data.numbersExitForSawna[index]);
-                                },
-                                child: SizedBox(
-                                  height: 30,
-                                  child: Center(
-                                    child: Text(
-                                      (data.numbersExitForSawna[index] + 1)
-                                          .toString(),
-                                      textAlign: TextAlign.center,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF),
+                              borderRadius: BorderRadius.circular(5),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.shade200,
+                                  offset: Offset(5, 5),
+                                  blurRadius: 1,
+                                ),
+                                BoxShadow(
+                                    color: Colors.grey.shade200,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 15,
+                                    spreadRadius: 1)
+                              ]),
+                          child: SizedBox(
+                            width: 50,
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: data.numbersExitForSawna.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return InkWell(
+                                  onTap: () {
+                                    itemScrollController.jumpTo(
+                                        index: data.numbersExitForSawna[index]);
+                                  },
+                                  child: SizedBox(
+                                    height: 30,
+                                    child: Center(
+                                      child: Text(
+                                        (data.numbersExitForSawna[index] + 1)
+                                            .toString(),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            },
+                                );
+                              },
+                            ),
                           ),
                         ),
                       ),

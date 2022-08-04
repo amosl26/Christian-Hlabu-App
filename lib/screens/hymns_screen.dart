@@ -73,70 +73,105 @@ class _HymnsScreenState extends State<HymnsScreen> {
                 data.sortTypeHymns == SortTypeForHymns.sortByAlpabet
                     ? Positioned(
                         right: 10,
-                        child: SizedBox(
-                          height: 300,
-                          width: 50,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            itemCount: data.alphabetsExistForHymna.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return InkWell(
-                                onTap: () {
-                                  int jumpToThis = data.hymnItems.indexWhere(
-                                      (element) => element.title.startsWith(
-                                          data.alphabetsExistForHymna[index]));
-                                  if (jumpToThis == -1) {
-                                    print(
-                                        "there is no elemnt start with ${data.alphabets[index]}");
-                                    return;
-                                  } else {
-                                    itemScrollController.jumpTo(
-                                        index: jumpToThis);
-                                  }
-                                },
-                                child: SizedBox(
-                                  height: 30,
-                                  child: Center(
-                                    child: Text(
-                                      data.alphabetsExistForHymna[index],
-                                      textAlign: TextAlign.center,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF),
+                              borderRadius: BorderRadius.circular(5),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.shade200,
+                                  offset: Offset(5, 5),
+                                  blurRadius: 1,
+                                ),
+                                BoxShadow(
+                                    color: Colors.grey.shade200,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 15,
+                                    spreadRadius: 1)
+                              ]),
+                          child: SizedBox(
+                            height: 300,
+                            width: 50,
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: data.alphabetsExistForHymna.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return InkWell(
+                                  onTap: () {
+                                    int jumpToThis = data.hymnItems.indexWhere(
+                                        (element) => element.title.startsWith(
+                                            data.alphabetsExistForHymna[
+                                                index]));
+                                    if (jumpToThis == -1) {
+                                      print(
+                                          "there is no elemnt start with ${data.alphabets[index]}");
+                                      return;
+                                    } else {
+                                      itemScrollController.jumpTo(
+                                          index: jumpToThis);
+                                    }
+                                  },
+                                  child: SizedBox(
+                                    height: 30,
+                                    child: Center(
+                                      child: Text(
+                                        data.alphabetsExistForHymna[index],
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            },
+                                );
+                              },
+                            ),
                           ),
                         ),
                       )
                     : Positioned(
                         right: 10,
-                        child: SizedBox(
-                          height: 300,
-                          width: 50,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            itemCount: data.numbersExitForHymna.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return InkWell(
-                                onTap: () {
-                                  itemScrollController.jumpTo(
-                                      index: data.numbersExitForHymna[index]);
-                                },
-                                child: SizedBox(
-                                  height: 30,
-                                  child: Center(
-                                    child: Text(
-                                      (data.numbersExitForHymna[index] + 1)
-                                          .toString(),
-                                      style: TextStyle(color: Colors.black),
-                                      textAlign: TextAlign.center,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF),
+                              borderRadius: BorderRadius.circular(5),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.shade200,
+                                  offset: Offset(5, 5),
+                                  blurRadius: 1,
+                                ),
+                                BoxShadow(
+                                    color: Colors.grey.shade200,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 15,
+                                    spreadRadius: 1)
+                              ]),
+                          child: SizedBox(
+                            height: 300,
+                            width: 50,
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: data.numbersExitForHymna.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return InkWell(
+                                  onTap: () {
+                                    itemScrollController.jumpTo(
+                                        index: data.numbersExitForHymna[index]);
+                                  },
+                                  child: SizedBox(
+                                    height: 30,
+                                    child: Center(
+                                      child: Text(
+                                        (data.numbersExitForHymna[index] + 1)
+                                            .toString(),
+                                        style: TextStyle(color: Colors.black),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            },
+                                );
+                              },
+                            ),
                           ),
                         ),
                       )
