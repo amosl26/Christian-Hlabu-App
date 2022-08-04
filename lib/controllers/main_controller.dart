@@ -181,8 +181,8 @@ class MainController with ChangeNotifier {
   }
 
   getAllTheNumberForSawan() {
-    var thelenth = (sawnawkItems.length / 50).floor();
-    var first = 50;
+    var thelenth = (sawnawkItems.length / 20).floor();
+    var first = 20;
     for (var i = 0; i < thelenth + 1; i++) {
       var newvalue = first * i;
       numbersExitForSawna.add(newvalue);

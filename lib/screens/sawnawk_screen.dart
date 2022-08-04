@@ -120,7 +120,7 @@ class _SawnawkScreenState extends State<SawnawkScreen> {
                                   height: 30,
                                   child: Center(
                                     child: Text(
-                                      data.numbersExitForSawna[index]
+                                      (data.numbersExitForSawna[index] + 1)
                                           .toString(),
                                       textAlign: TextAlign.center,
                                     ),

@@ -128,7 +128,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
                                   height: 30,
                                   child: Center(
                                     child: Text(
-                                      data.numbersExitForHymna[index]
+                                      (data.numbersExitForHymna[index] + 1)
                                           .toString(),
                                       style: TextStyle(color: Colors.black),
                                       textAlign: TextAlign.center,
