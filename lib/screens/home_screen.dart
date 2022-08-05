@@ -46,11 +46,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: provider.Consumer<MainController>(
         builder: (context, data, child) {
-          if (data.hymnItems.isEmpty) {
+          if (data.allCategory.isEmpty) {
             data.getHymnCategory();
             return const Center(child: CircularProgressIndicator());
           }
-          if (data.hymnItems.isNotEmpty) {
+          if (data.allCategory.isNotEmpty) {
             return Column(
               children: [
                 Expanded(
@@ -58,23 +58,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       itemBuilder: (BuildContext context, index) {
                         return ListTile(
                           onTap: () {
-                            List<HymnModel> data =
-                                provider.Provider.of<MainController>(context,
-                                        listen: false)
-                                    .getDataInSelectedCategory(
-                                        provider.Provider.of<MainController>(
-                                                context,
-                                                listen: false)
-                                            .allCategory[index]);
+                            List<HymnModel> info =
+                                data.getDataInSelectedCategory(
+                                    data.allCategory[index]);
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) =>
-                                    SubCategoryScreen(data: data)));
+                                    SubCategoryScreen(data: info)));
                           },
                           leading: Text(index.toString()),
-                          title: Text(provider.Provider.of<MainController>(
-                                  context,
-                                  listen: false)
-                              .allCategory[index]),
+                          title: Text(data.allCategory[index]),
                         );
                       },
                       separatorBuilder: (BuildContext context, index) {
@@ -82,10 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 10,
                         );
                       },
-                      itemCount: provider.Provider.of<MainController>(context,
-                              listen: false)
-                          .allCategory
-                          .length),
+                      itemCount: data.allCategory.length),
                 ),
               ],
             );

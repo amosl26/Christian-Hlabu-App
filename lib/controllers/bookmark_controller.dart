@@ -14,14 +14,12 @@ class BookmarkController with ChangeNotifier {
     required String category,
     required String songNumber,
     required String title,
-    required bool bookmark,
   }) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     if (hymnsInStorage.indexWhere((element) => element.id == id) != -1) {
       return;
     }
-    hymnsInStorage
-        .add(HymnModel(id, pageNumber, songNumber, title, category, bookmark));
+    hymnsInStorage.add(HymnModel(id, pageNumber, songNumber, title, category));
     notifyListeners();
     List<String> hymnsInStorageString = [];
     // get the last saved data and convert it to JSON string
@@ -45,12 +43,12 @@ class BookmarkController with ChangeNotifier {
         var makeTheDataMapAgine = jsonDecode(hymnsDataStringFormat[i]);
         hymnsInStorage.add(
           HymnModel(
-              makeTheDataMapAgine["id"],
-              makeTheDataMapAgine["pageNumber"],
-              makeTheDataMapAgine["songNumber"],
-              makeTheDataMapAgine["title"],
-              makeTheDataMapAgine["category"],
-              makeTheDataMapAgine["bookmark"]),
+            makeTheDataMapAgine["id"],
+            makeTheDataMapAgine["pageNumber"],
+            makeTheDataMapAgine["songNumber"],
+            makeTheDataMapAgine["title"],
+            makeTheDataMapAgine["category"],
+          ),
         );
       }
     }
@@ -62,7 +60,6 @@ class BookmarkController with ChangeNotifier {
       "pageNumber": hymnesData.pageNumber,
       "songNumber": hymnesData.songNumber,
       "title": hymnesData.title,
-      "bookmark": hymnesData.bookmark,
     });
   }
 
@@ -95,14 +92,13 @@ class BookmarkController with ChangeNotifier {
     required String sawnawkNumber,
     required String titleFalam,
     required String titleEnglish,
-    required bool bookmark,
   }) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     if (SawnInStorage.indexWhere((element) => element.id == id) != -1) {
       return;
     }
-    SawnInStorage.add(SawnAwkModel(
-        id, pageNumber, sawnawkNumber, titleFalam, titleEnglish, bookmark));
+    SawnInStorage.add(
+        SawnAwkModel(id, pageNumber, sawnawkNumber, titleFalam, titleEnglish));
     notifyListeners();
     List<String> SawnInStorageString = [];
     // get the last saved data and convert it to JSON string
@@ -130,7 +126,6 @@ class BookmarkController with ChangeNotifier {
           makeTheDataMapAgine["sawnawkNumber"],
           makeTheDataMapAgine["titleFalam"],
           makeTheDataMapAgine["titleEnglish"],
-          makeTheDataMapAgine["bookmark"],
         ));
       }
     }
@@ -156,7 +151,6 @@ class BookmarkController with ChangeNotifier {
       "sawnawkNumber": sawnAwkModel.sawnawkNumber,
       "titleFalam": sawnAwkModel.titleFalam,
       "titleEnglish": sawnAwkModel.titleEnglish,
-      "bookmark": sawnAwkModel.bookmark,
     });
   }
 }

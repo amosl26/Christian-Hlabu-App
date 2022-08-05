@@ -4,10 +4,9 @@ class HymnModel {
   late String songNumber;
   late String title;
   late String category;
-  late bool bookmark;
 
-  HymnModel(this.id, this.pageNumber, this.songNumber, this.title,
-      this.category, this.bookmark);
+  HymnModel(
+      this.id, this.pageNumber, this.songNumber, this.title, this.category);
 
   HymnModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -15,6 +14,5 @@ class HymnModel {
     songNumber = json['songNumber'];
     title = json['title'];
     category = json['category'];
-    bookmark = json['bookmark'];
   }
 }

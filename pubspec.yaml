@@ -46,6 +46,7 @@ dependencies:
   toggle_switch: ^2.0.1
   flutter_launcher_icons: ^0.9.3
   flutter_speed_dial: ^6.0.0
+<<<<<<< HEAD
   ##Print Functionality hrang ah
   screenshot: ^1.2.3
   share: ^2.0.4
@@ -53,6 +54,9 @@ dependencies:
   file: ^6.1.2
   
  
+=======
+  scrollable_positioned_list: ^0.3.2
+>>>>>>> dev
 
 flutter_icons:
     android: true
