@@ -416,6 +416,7 @@ packages:
     source: hosted
     version: "0.13.1"
 <<<<<<< HEAD
+<<<<<<< HEAD
   screenshot:
     dependency: "direct main"
     description:
@@ -431,6 +432,8 @@ packages:
     source: hosted
     version: "2.0.4"
 =======
+=======
+>>>>>>> dev
   scrollable_positioned_list:
     dependency: "direct main"
     description:
@@ -438,6 +441,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.2"
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
   shared_preferences:
     dependency: "direct main"
