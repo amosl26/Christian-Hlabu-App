@@ -51,7 +51,7 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
             return HymnsCardWidget(
               id: widget.data[index].id!,
               pageNumber: widget.data[index].pageNumber,
-              title: widget.data[index].title,
+              title: widget.data[index].title.toUpperCase(),
               songNumber: widget.data[index].songNumber,
               category: widget.data[index].category,
               isVisible: false,

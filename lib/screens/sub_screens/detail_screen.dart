@@ -48,7 +48,7 @@ class _DetailScreen extends State<DetailScreen> {
         backgroundColor: primaryBg,
         centerTitle: false,
         title: Text(
-          widget.title,
+          widget.title.toUpperCase(),
           style: TextStyle(color: primaryText, fontSize: 15),
         ),
         leading: IconButton(

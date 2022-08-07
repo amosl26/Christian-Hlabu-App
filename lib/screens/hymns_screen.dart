@@ -61,7 +61,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
                     return HymnsCardWidget(
                       id: data.hymnItems[index].id!,
                       pageNumber: data.hymnItems[index].pageNumber,
-                      title: data.hymnItems[index].title,
+                      title: data.hymnItems[index].title.toUpperCase(),
                       songNumber: data.hymnItems[index].songNumber,
                       category: data.hymnItems[index].category,
                       isVisible: false,

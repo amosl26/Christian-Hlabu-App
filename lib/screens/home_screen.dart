@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     SubCategoryScreen(data: info)));
                           },
                           leading: Text(index.toString()),
-                          title: Text(data.allCategory[index]),
+                          title: Text(data.allCategory[index].toUpperCase()),
                         );
                       },
                       separatorBuilder: (BuildContext context, index) {
