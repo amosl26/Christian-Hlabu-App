@@ -6,12 +6,21 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          "Christian Hymns Hlabu",
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: primaryText, fontSize: 24),
+        Image.asset(
+          iconsPath + 'logo-icon.png',
+          height: 150,
+          width: 150,
+        ),
+        Center(
+          child: Text(
+            "Christian Hymns Hlabu",
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: primaryText, fontSize: 24),
+          ),
         ),
       ],
     );
