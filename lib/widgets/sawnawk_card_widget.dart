@@ -1,6 +1,6 @@
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/models/sawnawk_model.dart';
-import 'package:falamhymns/screens/sub_screens/detail_screen.dart';
+import 'package:ChristianHlabu/config/app_theme.dart';
+import 'package:ChristianHlabu/models/sawnawk_model.dart';
+import 'package:ChristianHlabu/screens/sub_screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -33,7 +33,6 @@ class SawnawkCardWidget extends HookWidget {
                       id,
                       pageNumber,
                       titleFalam,
-                
                       sawnawkNumber,
                       SawnAwkModel(
                         id,

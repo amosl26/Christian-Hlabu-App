@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controllers/bookmark_controller.dart';
-import 'package:falamhymns/models/sawnawk_model.dart';
+import 'package:ChristianHlabu/config/app_theme.dart';
+import 'package:ChristianHlabu/controllers/bookmark_controller.dart';
+import 'package:ChristianHlabu/models/sawnawk_model.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';

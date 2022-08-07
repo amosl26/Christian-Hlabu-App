@@ -1,6 +1,6 @@
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/models/hymn_model.dart';
-import 'package:falamhymns/widgets/hymn_card_widget.dart';
+import 'package:ChristianHlabu/config/app_theme.dart';
+import 'package:ChristianHlabu/models/hymn_model.dart';
+import 'package:ChristianHlabu/widgets/hymn_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

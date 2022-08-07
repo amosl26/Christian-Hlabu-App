@@ -1,4 +1,4 @@
-import 'package:falamhymns/config/app_theme.dart';
+import 'package:ChristianHlabu/config/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
