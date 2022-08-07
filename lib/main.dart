@@ -37,7 +37,7 @@ class MyApp extends HookWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       darkTheme: ThemeData(
-        scaffoldBackgroundColor: Colors.red,
+        scaffoldBackgroundColor: Colors.white,
         fontFamily: "Circular",
       ),
       home: Prepare(),
