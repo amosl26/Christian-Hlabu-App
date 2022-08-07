@@ -1,7 +1,7 @@
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controllers/bookmark_controller.dart';
-import 'package:falamhymns/widgets/hymn_card_widget.dart';
-import 'package:falamhymns/widgets/sawnawk_card_widget.dart';
+import 'package:ChristianHlabu/config/app_theme.dart';
+import 'package:ChristianHlabu/controllers/bookmark_controller.dart';
+import 'package:ChristianHlabu/widgets/hymn_card_widget.dart';
+import 'package:ChristianHlabu/widgets/sawnawk_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';

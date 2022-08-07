@@ -1,8 +1,8 @@
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controllers/main_controller.dart';
-import 'package:falamhymns/models/hymn_model.dart';
-import 'package:falamhymns/screens/about_screen.dart';
-import 'package:falamhymns/screens/sub_screens/sub_category_screen.dart';
+import 'package:ChristianHlabu/config/app_theme.dart';
+import 'package:ChristianHlabu/controllers/main_controller.dart';
+import 'package:ChristianHlabu/models/hymn_model.dart';
+import 'package:ChristianHlabu/screens/about_screen.dart';
+import 'package:ChristianHlabu/screens/sub_screens/sub_category_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart' as provider;
 
@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     SubCategoryScreen(data: info)));
                           },
                           leading: Text(index.toString()),
-                          title: Text(data.allCategory[index]),
+                          title: Text(data.allCategory[index].toUpperCase()),
                         );
                       },
                       separatorBuilder: (BuildContext context, index) {

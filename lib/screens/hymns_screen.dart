@@ -1,6 +1,6 @@
-import 'package:falamhymns/config/app_theme.dart';
-import 'package:falamhymns/controllers/main_controller.dart';
-import 'package:falamhymns/widgets/hymn_card_widget.dart';
+import 'package:ChristianHlabu/config/app_theme.dart';
+import 'package:ChristianHlabu/controllers/main_controller.dart';
+import 'package:ChristianHlabu/widgets/hymn_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -61,7 +61,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
                     return HymnsCardWidget(
                       id: data.hymnItems[index].id!,
                       pageNumber: data.hymnItems[index].pageNumber,
-                      title: data.hymnItems[index].title,
+                      title: data.hymnItems[index].title.toUpperCase(),
                       songNumber: data.hymnItems[index].songNumber,
                       category: data.hymnItems[index].category,
                       isVisible: false,
